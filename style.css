@@ -5,6 +5,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family:  "Lexend", sans-serif;
+    font-size: 2.0rem;
 }
 
 :root{
@@ -13,36 +14,71 @@
     --braco-gelo: #F9F9F9;
     --cinza: #E5E5E5;
     --verde-musgo: #4A7C59;
+
+    font-size: 62.5%; 
+}
+
+body {
+    margin-inline: 5.5rem;
+    background-image: url(./fotos//fundo-header.png);
 }
 
 header {
-
-    img {
-        .logo{
-            height: 100px;
-            width: 100px;
-        }
-    }
     display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 4.5rem;
 
-    nav {
-        
-        .a {
-            display: flex;
-        }
+}
 
-        li{
-            list-style: none;
-        }
 
-        a {
-            border: 2px solid greenyellow;
-            gap: ;
-            font-size: 32px;
+.logo img {
+    height: 8rem;
+    width: 8rem;
+}
+
+.a {
+    display: flex;
+    gap: 2.5rem;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+            font-size: 3.2rem;
             text-decoration: none;
             line-height: auto;
             font-weight: 600;
             color: var(--azul-escuro);
-        }
-    }
+} 
+
+h1 {
+    font-size: 6.4rem;
+    font-weight: 800;
+    color: var(--azul-escuro);
+    line-height: 6.0rem;
+}
+
+.verde {
+    color: var(--verde-musgo);
+}
+
+.texto-bemvindo {
+    border: red 2px solid;
+    margin-top: 10rem;
+    width: 50rem;
+    height: 40rem;
+}
+
+p{
+    margin-top: 3rem;
+}
+
+button {
+    background-color: var(--amarelo);
+    border: none;
+    color: var(--braco-gelo)
 }
