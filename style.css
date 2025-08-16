@@ -9,13 +9,14 @@ body {
 
 
 main {
+    width: 127.9rem;
     height: 66.6rem;
 }
  
 section {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    gap: 5.6rem;
+    height: 5.48;
 }
 
 
@@ -37,7 +38,7 @@ h1 {
 }
 
 p {
-    margin-top: 2.5rem;
+    margin-top: 3rem;
     line-height: 1.2;
 }
 
@@ -49,12 +50,6 @@ button {
     width: 21.954rem;
     border-radius: 15px;
     margin-top: 6.1rem;
-}
-
-button:hover {
-    background-color: var(--amarelo-hover);
-    cursor: pointer;
-    transition: ease-in-out 0.5s;
 }
 
 
@@ -80,29 +75,6 @@ button:hover {
     gap: 5.6rem;
 }
 
-footer {
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    padding-block: 1.8rem;
-    background-color: var(--azul-escuro);
-    color: var(--braco-gelo);    
-    width: 100%;
-    height: 6rem;
-    gap: 11rem;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-}
-
-footer p {
-    color: var(--braco-gelo);
-    font-size: 2rem;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
-    margin-block: auto;
-}
 p #left {
     text-align: left;
 }

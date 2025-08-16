@@ -1,25 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./learn.css">
+    <title>GeoImpacto - Learn</title>
 </head>
 <body>
-        <header>
+    <header>
       <div class="logo">
-        <img src="./fotos/logo.png" alt="Logo GeoImpacto">
+       <a href="./index.html">
+         <img src="./fotos/logo.png" alt="Logo GeoImpacto">
+       </a>
       </div>
       <nav>
         <ul>
           <div class="a">
-            <li><a href="#">LEARN</a></li>
+            <li><a href="./learn.html" id="active">LEARN</a></li>
            <li><a href="#">GAMES</a></li>
             <li><a href="#">ABOUT US</a></li>
            <li><a href="#">CONTACT US</a></li>
           </div>
         </ul>
       </nav>
-    </header
+    </header>
+
+    <main>
+        <div class="h2">
+          <h2>Sobre o que você quer</h2>
+        <h2 class="verde">aprender?...</h2>
+        </div>
+
+        <div class="cards">
+            <div class="first-row">
+                <div class="card">
+                    <img src="./fotos/learn/furacão-learn.png" alt="imagem de um furacão">
+                    <h3>Furacão <i class="ph ph-arrow-right"></i></h3>
+                </div>
+                <div class="card">
+                    <img src="./fotos/learn/terrremoto-learn.png" alt="imagem de um terremoto">
+                    <h3>Terremoto <i class="ph ph-arrow-right"></i></h3>
+                </div>
+                <div class="card">
+                    <img src="./fotos/learn/tsunami-learn.png" alt="imagem de um tsunami">
+                    <h3>Tsunami <i class="ph ph-arrow-right"></i></h3>
+                </div>
+            </div>
+
+            <div class="second-row">
+                <div class="card">
+                    <img src="./fotos/learn/incendioflorestal-learn.png" alt="imagem de uma floresta queimando">
+                    <h3>Incêndios florestais <i class="ph ph-arrow-right"></i></h3>
+                </div>
+                <div class="card">
+                    <img src="./fotos/learn/enchente-learn.png" alt="imagem de um carro afundando na enchente">
+                    <h3>Enchente <i class="ph ph-arrow-right"></i></h3>
+                </div>
+                <div class="card">
+                    <img src="./fotos/learn/vulcão-learn.png" alt="imagem de um vulcão em erupção">
+                    <h3>Erupção vulcânica <i class="ph ph-arrow-right"></i></h3>
+                </div>
+            </div>
+        </div>
+
+        <button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
+                <path d="M3.26816 10.9316L3.80059 11.8605C4.2707 12.6818 5.04102 13.2879 5.95293 13.5484L9.23242 14.483C10.2066 14.7605 10.875 15.6498 10.875 16.6637V18.9236C10.875 19.5467 11.2262 20.1131 11.7812 20.3906C12.3363 20.6682 12.6875 21.2346 12.6875 21.8576V24.0666C12.6875 24.9502 13.5314 25.5902 14.3811 25.3467C15.293 25.0861 16.001 24.3555 16.2332 23.4322L16.3918 22.7979C16.6297 21.8406 17.2527 21.0193 18.108 20.5322L18.5668 20.2717C19.4164 19.7902 19.9375 18.884 19.9375 17.9098V17.4396C19.9375 16.7203 19.6486 16.0293 19.1389 15.5195L18.918 15.2986C18.4082 14.7889 17.7172 14.5 16.9979 14.5H14.5566C13.9279 14.5 13.3049 14.3357 12.7555 14.0242L10.8014 12.9084C10.5578 12.7668 10.3709 12.5402 10.2803 12.274C10.099 11.7303 10.3426 11.1412 10.858 10.8863L11.1922 10.7164C11.566 10.5295 12.0021 10.4955 12.3986 10.6314L13.7127 11.0676C14.1771 11.2205 14.6869 11.0449 14.9531 10.6428C15.2193 10.2463 15.191 9.71953 14.8852 9.35137L14.1148 8.42813C13.5484 7.74844 13.5541 6.75723 14.1318 6.08887L15.0211 5.05234C15.5195 4.46895 15.5988 3.63633 15.2193 2.97363L15.0834 2.73574C14.8852 2.72441 14.6926 2.71875 14.4943 2.71875C9.23809 2.71875 4.78047 6.16816 3.26816 10.9316ZM26.2812 14.5C26.2812 12.4156 25.7375 10.4559 24.7859 8.75098L23.3359 9.33438C22.4467 9.69121 21.9879 10.6824 22.2881 11.5887L23.2453 14.4604C23.4436 15.0494 23.925 15.4969 24.5254 15.6441L26.1736 16.0576C26.2416 15.5479 26.2756 15.0268 26.2756 14.5H26.2812ZM0 14.5C0 10.6544 1.52767 6.96623 4.24695 4.24695C6.96623 1.52767 10.6544 0 14.5 0C18.3456 0 22.0338 1.52767 24.753 4.24695C27.4723 6.96623 29 10.6544 29 14.5C29 18.3456 27.4723 22.0338 24.753 24.753C22.0338 27.4723 18.3456 29 14.5 29C10.6544 29 6.96623 27.4723 4.24695 24.753C1.52767 22.0338 0 18.3456 0 14.5Z" fill="#F9F9F9"/>
+            </svg>
+            Linha do tempo - os piores desastres naturais da história
+        </button>
+    </main>
+
+    <footer>
+        <p id="left">Educação para um planeta mais consciente</p>
+        <p id="center">© 2025 GeoImpacto. Todos os direitos reservados.</p>
+        <p id="right">GeoImpacto</p>
+    </footer>
 </body>
 </html>

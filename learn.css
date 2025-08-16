@@ -1,0 +1,43 @@
+@import url(./global.css);
+
+.h2{
+    display: flex;
+    flex-direction: row;
+    gap: 1.4rem;
+    margin-bottom: 2.4rem;
+    width: 108rem;
+    border: 2px solid pink;
+    margin-inline: auto;
+    margin-top: 3.4rem;
+}
+
+.cards {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5.8rem;
+    
+    
+}
+
+.first-row, .second-row {
+    display: flex;
+    flex-direction: row;
+    gap: 6.1rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+
+body {
+    border: 2px solid red;
+}
+
+footer {
+    margin-top: 7.3rem;
+}
