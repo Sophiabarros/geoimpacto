@@ -1,43 +1,62 @@
-@import url(./global.css);
+ @import url(./global.css);
+ body {
+ }
+
+ main {
+    width: 107.3rem;
+    margin-inline: auto;
+    padding-inline: auto;
+
+ }
 
 .h2{
     display: flex;
-    flex-direction: row;
     gap: 1.4rem;
-    margin-bottom: 2.4rem;
-    width: 108rem;
-    border: 2px solid pink;
-    margin-inline: auto;
-    margin-top: 3.4rem;
+    margin-bottom: 2.6rem;
 }
 
 .cards {
     display: flex;
-    align-items: center;
     flex-direction: column;
-    gap: 5.8rem;
-    
-    
 }
 
-.first-row, .second-row {
+.linha {
     display: flex;
     flex-direction: row;
-    gap: 6.1rem;
+    gap: 5.6rem;
+    margin-bottom: 5.8rem;
 }
 
-.card {
+.link {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
 
+h3 {
+    margin-top: 2.1rem;
 }
 
-
-
-body {
-    border: 2px solid red;
+a {
+    margin-top: 1.5rem;
+}
 }
 
-footer {
-    margin-top: 7.3rem;
+button {
+    border: none;
+    background-color: var(--verde-musgo);
+    width: 107.3rem;
+    height: 8.3rem;
+    border-radius: 15px;
+    line-height: auto;
+
+    a {
+        font-size: 2.4rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        color: var(--braco-gelo);
+    }
+        }
+
+footer{
+    margin-top: 100%;
 }
