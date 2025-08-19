@@ -1,0 +1,23 @@
+footer p {
+    color: var(--braco-gelo);
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin-block: auto;
+}
+p #left {
+    text-align: left;
+}
+
+p #center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+p #right {
+    text-align: right;
+    font-weight: bold;
+}

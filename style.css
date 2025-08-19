@@ -1,5 +1,5 @@
 @import url(./global.css);
-
+@import url(./footer.css);
 body {
      background-image: url(./fotos//fundo-header.png);
      background-repeat: no-repeat;
@@ -9,14 +9,14 @@ body {
 
 
 main {
-    width: 127.9rem;
+    
     height: 66.6rem;
 }
  
 section {
     display: flex;
-    gap: 5.6rem;
-    height: 5.48;
+    align-items: center;
+    justify-content: space-between;
 }
 
 
@@ -38,7 +38,7 @@ h1 {
 }
 
 p {
-    margin-top: 3rem;
+    margin-top: 2.5rem;
     line-height: 1.2;
 }
 
@@ -50,6 +50,12 @@ button {
     width: 21.954rem;
     border-radius: 15px;
     margin-top: 6.1rem;
+}
+
+button:hover {
+    background-color: var(--amarelo-hover);
+    cursor: pointer;
+    transition: ease-in-out 0.5s;
 }
 
 
@@ -90,3 +96,4 @@ p #right {
     text-align: right;
     font-weight: bold;
 }
+
