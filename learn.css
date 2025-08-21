@@ -1,0 +1,61 @@
+ @import url(./global.css);
+ @import url(./footer.css);
+ body {
+ }
+
+ main {
+    width: 107.3rem;
+    margin-inline: auto;
+    padding-inline: auto;
+
+ }
+
+.h2{
+    display: flex;
+    color: var(--azul-escuro);
+    gap: 1.4rem;
+    margin-bottom: 2.6rem;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+}
+
+.linha {
+    display: flex;
+    flex-direction: row;
+    gap: 5.6rem;
+    margin-bottom: 5.8rem;
+}
+
+.link {
+    display: flex;
+    justify-content: space-between;
+
+h3 {
+    color: var(--azul-escuro);
+    margin-top: 2.1rem;
+}
+
+a {
+    margin-top: 1.5rem;
+}
+}
+
+button {
+    border: none;
+    background-color: var(--verde-musgo);
+    width: 107.3rem;
+    height: 8.3rem;
+    border-radius: 15px;
+    line-height: auto;
+    margin-bottom: 5.4rem;
+    a {
+        font-size: 2.4rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        color: var(--braco-gelo);
+    }
+        }

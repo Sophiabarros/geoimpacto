@@ -1,0 +1,106 @@
+@import url(./global.css);
+body {
+     background-image: url(./fotos//fundo-header.png);
+     background-repeat: no-repeat;
+     background-size: cover;
+    }
+
+
+
+main {
+    
+    height: 66.6rem;
+}
+ 
+section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+h1 {
+    font-size: 6.4rem;
+    font-weight: 800;
+    color: var(--azul-escuro);
+    line-height: 8.0rem;
+}
+
+.verde {
+    color: var(--verde-musgo);
+}
+
+.bemvindo {
+    margin-top: 10rem;
+    width: 49.1rem;
+    height: 47rem;
+}
+
+p {
+    margin-top: 2.5rem;
+    line-height: 1.2;
+}
+
+button {
+    background-color: var(--amarelo);
+    border: none;
+    color: var(--braco-gelo);
+    height: 5.4rem;
+    width: 21.954rem;
+    border-radius: 15px;
+    margin-top: 6.1rem;
+}
+
+button:hover {
+    background-color: var(--amarelo-hover);
+    cursor: pointer;
+    transition: ease-in-out 0.5s;
+}
+
+
+#imagem1 {
+   margin-top: 2.5rem;
+    border-radius: 1.2rem;
+    width: 33.3rem; 
+    height: 54.8rem; 
+    object-fit: cover;
+}
+
+.imagens-desastres {
+    margin-top: 1.4rem;
+    display: flex;
+    gap: 5.6rem;
+    width: 72.2rem; 
+    height: 66.6rem; 
+}
+
+.duasimg {
+    display: flex;
+    flex-direction: column;
+    gap: 5.6rem;
+}
+
+footer p {
+    color: var(--braco-gelo);
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin-block: auto;
+}
+p #left {
+    text-align: left;
+}
+
+p #center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+p #right {
+    text-align: right;
+    font-weight: bold;
+}
+
