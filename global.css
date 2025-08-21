@@ -67,7 +67,6 @@ font-weight: 700;
 
 .verde {
     color: var(--verde-musgo);
-<<<<<<< HEAD
 }
 
 footer {
@@ -83,7 +82,6 @@ footer {
     position: fixed;
     left: 0;
     bottom: 0;
-}
 }
 
 footer p {
@@ -108,6 +106,4 @@ p #center {
 p #right {
     text-align: right;
     font-weight: bold;
-=======
->>>>>>> ad3c6d4dcdc6806ff4b274f8778f69631c15c875
 }
