@@ -1,4 +1,8 @@
 @import url(./global.css);
+<<<<<<< HEAD
+=======
+@import url(./footer.css);
+>>>>>>> ad3c6d4dcdc6806ff4b274f8778f69631c15c875
 body {
      background-image: url(./fotos//fundo-header.png);
      background-repeat: no-repeat;
@@ -80,6 +84,7 @@ button:hover {
     gap: 5.6rem;
 }
 
+<<<<<<< HEAD
 footer p {
     color: var(--braco-gelo);
     font-size: 2rem;
@@ -88,6 +93,8 @@ footer p {
     line-height: normal;
     margin-block: auto;
 }
+=======
+>>>>>>> ad3c6d4dcdc6806ff4b274f8778f69631c15c875
 p #left {
     text-align: left;
 }

@@ -12,7 +12,10 @@
 
 .h2{
     display: flex;
+<<<<<<< HEAD
     color: var(--azul-escuro);
+=======
+>>>>>>> ad3c6d4dcdc6806ff4b274f8778f69631c15c875
     gap: 1.4rem;
     margin-bottom: 2.6rem;
 }
@@ -34,7 +37,10 @@
     justify-content: space-between;
 
 h3 {
+<<<<<<< HEAD
     color: var(--azul-escuro);
+=======
+>>>>>>> ad3c6d4dcdc6806ff4b274f8778f69631c15c875
     margin-top: 2.1rem;
 }
 
