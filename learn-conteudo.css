@@ -1,1 +1,260 @@
-@import url(./global.css);
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:  "Lexend", sans-serif;
+    font-size: 2.0rem;
+}
+
+:root{
+    --azul-escuro: #1E3D59;
+    --amarelo: #F77F00;
+    --amarelo-hover: #ec7a00;
+    --braco-gelo: #F9F9F9;
+    --branco: #ffffff;
+    --cinza: #E5E5E5;
+    --verde-musgo: #4A7C59;
+    --h1: #D9D9D9;
+
+    font-size: 62.5%; 
+}
+
+header {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2.5rem;
+    max-width: 90%;
+    margin-inline: auto;
+}
+
+
+.logo img {
+    height: 8rem;
+    width: 8rem;
+}
+
+.a {
+    display: flex;
+    gap: 2.5rem;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    font-size: 3.2rem;
+    text-decoration: none;
+    line-height: auto;
+    font-weight: 600;
+    color: var(--braco-gelo);
+} 
+
+#active {
+    color: var(--amarelo);
+}
+
+body {
+    background-color: var(--braco-gelo);
+}
+
+h2 {
+font-size: 4.8rem;
+font-style: normal;
+font-weight: 700;
+}
+
+.verde {
+    color: var(--verde-musgo);
+}
+
+footer {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding-block: 1.8rem;
+    background-color: var(--azul-escuro);
+    color: var(--braco-gelo);    
+    width: 100%;
+    height: 6rem;
+    gap: 11rem;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+footer p {
+    color: var(--braco-gelo);
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin-block: auto;
+}
+p #left {
+    text-align: left;
+}
+
+p #center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+p #right {
+    text-align: right;
+    font-weight: bold;
+}
+
+
+section.intro {
+    background-image: url(./fotos/learn-furacão/furacão.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 102.4rem;
+    margin-top: -12rem;
+
+        p {
+    color: var(--branco);
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    }
+}
+
+h1{
+    color: var(--h1);
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 9.6rem;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+
+.paragrafo {
+    margin-top: 2.9rem;
+    width: 64rem;
+}
+
+.descricao {
+    margin-left: 2.2rem;
+}
+
+.textos-intro {
+    padding-top: 27.7rem;
+    height: 100%;
+    max-width: 90%;
+    margin-inline: auto;
+}
+
+.spam {
+
+    display: flex;
+    gap: 2.55rem;
+    width: 37.2rem;
+    height: 9.1rem;
+}
+
+.spam-p p{
+    margin-bottom: 2.3rem;
+}
+
+#uma-linha {
+        margin-bottom: 4.9rem;
+    }
+
+.spam-line {
+    margin-top: 12rem;
+    display: flex;
+    flex-direction: row;
+    gap: 8.5rem;
+}
+
+hr {
+    background-color: var(--branco);
+    width: 100%rem;
+    height: 0.4rem;
+    margin-top: 2.7rem;
+}
+
+section.oque {
+    margin-top: 15.1rem;
+    max-width: 90%;
+    margin-inline: auto;
+    display: flex;
+    gap: 7.9rem;
+}
+
+.texto-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 3.4rem;
+    width: 53.2rem;
+    height: 50rem;
+}
+
+.imagens-1 {
+    display: flex;
+    gap: 2.4rem;
+
+    .imagens-colunas {
+        display: flex;
+        flex-direction: column;
+        gap: 2.8rem
+    }
+}
+
+section.quarta{
+    margin-top: 12.5rem;
+    max-width: 90%;
+    margin-inline: auto;
+    display: flex;
+    gap: 2.9rem;
+    height: 51.2rem;
+
+    button {
+        border: none;
+        background-color: var(--braco-gelo);
+    }
+
+    button.e {
+        transform: rotate(-179.478deg);
+    }
+
+    .siema {
+        padding-top: 4.4rem;
+        background-color: var(--azul-escuro);
+        width: 144rem;
+        
+        .conteudo{
+            width: 90%;
+            margin-inline: auto;
+            display: flex;
+            gap: 4.5rem;
+
+            h2 {
+                color: var(--branco);
+                font-weight: 700;
+            }
+
+            p {
+            margin-top: 2.2rem;
+            color: var(--branco);
+            font-size: 2rem;
+            font-weight: 300;
+            }
+        }
+
+        
+    }
+}
