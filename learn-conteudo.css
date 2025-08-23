@@ -214,6 +214,61 @@ section.oque {
     }
 }
 
+.body  section{
+    max-width: 90%;
+    margin-inline: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+section.terceira {
+    height: 72rem;
+    width: 100%;
+    background-color: var(--azul-escuro);
+    margin-top: 20.9rem;
+
+    p {
+        font-size: 2rem;
+        font-weight: 350;
+        color: var(--branco);
+    }
+
+    h2{
+        padding-top: 3.6rem;
+        color: var(--branco);
+        text-align: center;
+    }
+    
+    
+    .informativos{
+        display: flex;
+        gap: 4.6rem;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 13.1rem;
+        max-width: 90%;
+        margin-inline: auto;
+    }
+
+    .info {
+        max-width: 90%;
+        border-radius: 15px;
+        border: 7px solid #D9D9D9;
+        background: rgba(217, 217, 217, 0.00);
+        width: 23.2rem;
+        height: 36.2rem;
+        text-align: center;
+        padding-inline: 1.4rem;
+       
+    }
+
+    svg {
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+    }
+}
+
 section.quarta{
     margin-top: 12.5rem;
     max-width: 90%;
@@ -235,11 +290,14 @@ section.quarta{
         padding-top: 4.4rem;
         background-color: var(--azul-escuro);
         width: 144rem;
-        
+        height: 51.2rem;
+
         .conteudo{
             width: 90%;
             margin-inline: auto;
             display: flex;
+            align-items: center;
+            justify-content: center;
             gap: 4.5rem;
 
             h2 {
@@ -253,8 +311,28 @@ section.quarta{
             font-size: 2rem;
             font-weight: 300;
             }
+
+            
         }
 
         
+    }
+}
+
+section.quinta {
+    margin-top: 16.3rem;
+    display: flex;
+    justify-content: space-between;
+
+    .texto-2 {
+        display: flex;
+        flex-direction: column;
+        width: 52rem;
+    }
+
+    .imagens-5{
+        img#pequena {
+            margin-bottom: 26.5rem;
+        }
     }
 }
