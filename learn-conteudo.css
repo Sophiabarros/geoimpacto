@@ -336,3 +336,77 @@ section.quinta {
         }
     }
 }
+
+section.sexta {
+  margin-top: 16rem;
+  padding: 2rem;
+}
+
+section.sexta h2 {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.conteudo-5 {
+  display: flex;
+  flex-direction: column;
+  gap: 8.8rem; 
+}
+
+.linha {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  align-items: center;
+  gap: 13rem;
+}
+
+.linha img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.5rem;
+}
+
+section.setima{
+    margin-top: 14.3rem;
+
+    h2 {
+        text-align: center;
+        margin-bottom: 5.8rem;
+    }
+
+    .topico{
+        width: 56.4rem;
+        display: flex;
+        gap: 4rem;
+    }
+
+    
+    .row-7 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 4.4rem;
+    }
+
+    .topico-row {
+        display: flex;
+        flex-direction: row;
+        gap: 4rem;
+    }
+}
+
+.button-up{
+    display: flex;
+  justify-content: flex-end; /* botão vai para a direita */
+  padding: 1rem 2rem;  
+}
+
+button#up {
+    border: none;
+    background-color: var(--braco-gelo);
+    margin-top: 7rem;
+    margin-bottom: 3rem;
+    justify-content: row;
+    cursor: pointer;
+}
