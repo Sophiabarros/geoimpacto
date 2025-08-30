@@ -111,26 +111,6 @@ p #right {
     font-weight: bold;
 }
 
-
-section.intro {
-    background-image: url(./fotos/learn-furacão/furacão.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 102.4rem;
-    margin-top: -12rem;
-
-        p {
-    color: var(--branco);
-    font-size: 2rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-
-    }
-}
-
 h1{
     color: var(--h1);
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
@@ -140,6 +120,13 @@ h1{
     text-transform: uppercase;
 }
 
+span{
+    color: var(--braco-gelo);
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
 
 .paragrafo {
     margin-top: 2.9rem;
@@ -158,20 +145,17 @@ h1{
 }
 
 .spam {
-
+    border: 2PX SOLID var(--azul-escuro);
     display: flex;
     gap: 2.55rem;
     width: 37.2rem;
     height: 9.1rem;
-}
 
-.spam-p p{
-    margin-bottom: 2.3rem;
-}
-
-#uma-linha {
-        margin-bottom: 4.9rem;
+    span {
+        
     }
+}
+
 
 .spam-line {
     margin-top: 12rem;
@@ -315,8 +299,11 @@ section.quarta{
             
         }
 
-        
     }
+}
+
+.texto-siema{
+    margin-left: 0rem;
 }
 
 section.quinta {
@@ -331,6 +318,11 @@ section.quinta {
     }
 
     .imagens-5{
+        display: flex;
+        gap: 3.2rem;
+    }
+    
+    .imagens-5{
         img#pequena {
             margin-bottom: 26.5rem;
         }
@@ -342,9 +334,30 @@ section.sexta {
   padding: 2rem;
 }
 
+section.sexta img {
+    max-width: 57.2rem;  /* limita largura máxima */
+    width: 100%;         /* ocupa todo o espaço do container */
+    height: auto;        /* mantém proporção da imagem */
+    border-radius: 0.5rem;
+  }
+  
+
 section.sexta h2 {
   text-align: center;
   margin-bottom: 5rem;
+}
+
+.p-6 {
+    width: 57.2rem;
+
+    p{
+        color: #000;
+    font-family: Lexend;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    }
 }
 
 .conteudo-5 {
@@ -354,8 +367,9 @@ section.sexta h2 {
 }
 
 .linha {
-  display: grid;
-  grid-template-columns: 1fr 1fr; 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   gap: 13rem;
 }
@@ -363,42 +377,77 @@ section.sexta h2 {
 .linha img {
   max-width: 100%;
   height: auto;
-  display: block;
   border-radius: 0.5rem;
 }
 
-section.setima{
+
+section.setima {
     margin-top: 14.3rem;
+    padding: 2rem;
+}
 
-    h2 {
-        text-align: center;
-        margin-bottom: 5.8rem;
-    }
+section.setima h2 {
+    text-align: center;
+    margin-bottom: 5.8rem;
+    font-size: 4.8rem;
+    font-weight: 700;
+}
 
-    .topico{
-        width: 56.4rem;
-        display: flex;
-        gap: 4rem;
-    }
 
-    
-    .row-7 {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        margin-bottom: 4.4rem;
-    }
+section.setima .grade {
+    display: flex;
+    flex-direction: column;
+    gap: 4.4rem;
+    margin-bottom: 4.4rem;
+}
 
-    .topico-row {
-        display: flex;
-        flex-direction: row;
-        gap: 4rem;
-    }
+.topico#ESQRD{
+    margin-right: 17rem;
+}
+
+section.setima .row-7 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+
+section.setima .topico {
+    display: flex;
+    gap: 4rem;
+    align-items: flex-start;
+    flex: 1;
+}
+
+
+section.setima .topico-row {
+    display: flex;
+    gap: 2rem;
+    margin-top: 3rem;
+    align-items: flex-start;
+}
+
+section.setima img {
+    width: 12rem;
+    height: 12rem;
+    object-fit: cover;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+
+section.setima p {
+
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 1.6;
+    text-align: justify;
 }
 
 .button-up{
     display: flex;
-  justify-content: flex-end; /* botão vai para a direita */
+  justify-content: flex-end;
   padding: 1rem 2rem;  
 }
 
