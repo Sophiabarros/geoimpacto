@@ -41,6 +41,7 @@ p {
     line-height: 1.2;
 }
 
+
 button {
     background-color: var(--amarelo);
     border: none;
@@ -50,6 +51,16 @@ button {
     border-radius: 15px;
     margin-top: 6.1rem;
 }
+
+button a{
+    color: #FFF;
+    text-align: center;
+    font-family: Lexend;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    }
 
 button:hover {
     background-color: var(--amarelo-hover);

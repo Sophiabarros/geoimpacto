@@ -11,4 +11,4 @@ btnUp.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" })
   })
 
-//cria outro js p mexer
+  //cria outro js p mexer

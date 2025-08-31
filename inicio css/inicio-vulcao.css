@@ -1,5 +1,5 @@
 section.intro {
-    background-image: url(../fotos/learn-enchente/learn-enchente.png);
+    background-image: url(../fotos/learn-vulcao/inicio-vulcao.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -14,15 +14,5 @@ section.intro {
     font-weight: 400;
     line-height: normal;
 
-    }
-}
-
-section.quinta{
-    h2 {
-        margin-bottom: 1.5rem;
-    }
-
-    .p-5 {
-        height: 40.6rem;
     }
 }
