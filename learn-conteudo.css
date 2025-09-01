@@ -144,16 +144,23 @@ span{
     margin-inline: auto;
 }
 
-.spam {
-    border: 2PX SOLID var(--azul-escuro);
+.spam-row{
     display: flex;
-    gap: 2.55rem;
+    flex-direction: row;
+    gap: 2.5rem;
+}
+
+.spam {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 37.2rem;
     height: 9.1rem;
 
-    span {
-        
+    span{
+        margin-left: 7.5rem;
     }
+
 }
 
 
@@ -168,7 +175,7 @@ hr {
     background-color: var(--branco);
     width: 100%rem;
     height: 0.4rem;
-    margin-top: 2.7rem;
+    margin-top: 5.7rem;
 }
 
 section.oque {
@@ -304,6 +311,7 @@ section.quarta{
 
 .texto-siema{
     margin-left: 0rem;
+    max-width: 70rem;
 }
 
 section.quinta {
@@ -335,9 +343,9 @@ section.sexta {
 }
 
 section.sexta img {
-    max-width: 57.2rem;  /* limita largura máxima */
-    width: 100%;         /* ocupa todo o espaço do container */
-    height: auto;        /* mantém proporção da imagem */
+    max-width: 57.2rem;  
+    width: 100%;        
+    height: auto;       
     border-radius: 0.5rem;
   }
   

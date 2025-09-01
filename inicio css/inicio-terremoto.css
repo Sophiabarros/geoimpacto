@@ -1,5 +1,5 @@
 section.intro {
-    background-image: url(../fotos/learn-tsunami/tsunami.png);
+    background-image: url(../fotos/learn-terremoto/terremoto.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -7,7 +7,7 @@ section.intro {
     height: 102.4rem;
     margin-top: -12rem;
 
-        p {
+    p {
     color: var(--branco);
     font-size: 2rem;
     font-style: normal;
@@ -15,8 +15,6 @@ section.intro {
     line-height: normal;
 
     }
-}
 
-.texto-siema{
-    margin-left: 0;
 }
+        
