@@ -1,0 +1,50 @@
+.carousel-container {
+   border: 2px solid green;
+   align-items: center;
+   width: 70%rem;
+    height: 46rem;
+    overflow: hidden;
+  }
+  
+  .carousel {
+    display: flex;
+
+    transition: transform 0.4s ease;
+  }
+  
+  .item {
+    height: 46rem;
+    width: 40rem;
+    margin: 0 20px;
+    background: #444;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  /* Estado de destaque */
+  .item.active {
+    flex: 0 0 240px;
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    z-index: 2;
+  }
+  
+  /* Vizinhos menores */
+  .item.shrink {
+    flex: 0 0 160px;
+    opacity: 0.7;
+  }
+  
+  /* Áreas invisíveis de navegação */
+  .nav-zone {
+    position: absolute;
+    top: 0;
+    width: 15%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .nav-left { left: 0; }
+  .nav-right { right: 0; }

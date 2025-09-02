@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+@import url(./carrossel.css);
 
 * {
     padding: 0;
@@ -311,7 +312,8 @@ section.quarta{
 
 .texto-siema{
     margin-left: 0rem;
-    max-width: 70rem;
+    min-width: 70rem;
+    max-width: 100rem;
 }
 
 section.quinta {
