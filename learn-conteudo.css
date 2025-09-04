@@ -237,10 +237,11 @@ section.terceira {
         gap: 4.6rem;
         flex-direction: row;
         align-items: center;
-        justify-content: space-between;
+        gap: 5.9rem;
         margin-top: 13.1rem;
         max-width: 90%;
         margin-inline: auto;
+        justify-content: center;
     }
 
     .info {
@@ -319,7 +320,8 @@ section.quarta{
 section.quinta {
     margin-top: 16.3rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 8.2rem;
 
     .texto-2 {
         display: flex;
@@ -379,7 +381,8 @@ section.sexta h2 {
 .linha {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 13rem;
   align-items: center;
   gap: 13rem;
 }
