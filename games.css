@@ -1,0 +1,87 @@
+@import url(./global.css);
+
+header{
+    margin-bottom: 6.8rem;
+    margin-inline: auto;
+}
+
+.h1-games{
+    width: 70.3rem;
+    height: 15.4rem;
+    display: flex;
+    flex-direction: column;
+
+    .h1-row{
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+
+    h1{
+        color: var(--azul-escuro);
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 800;
+    }
+
+    h1#verde{
+        color: var(--verde-musgo);
+    }
+}
+
+.p-games{
+    margin-top: 4.1rem;
+    width: 64.7rem;
+    height: 44rem;
+    text-align: justify;
+}
+
+.imagens-games {
+    gap: 1.4rem;    
+
+    img#solo{
+        width: 49.8rem;
+        height: 31.4rem;
+    }
+
+    img{
+        width: 24rem;
+        height: 18.6rem;
+    }
+
+    display: flex;
+    flex-direction: column;
+
+    .img-games-row{
+        gap: 1.8rem;
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+button {
+    height: 6.8rem;
+    width: 49.8rem;
+    margin-top: 2.6rem;
+    border: none;
+    padding-block: 1.4rem;
+    padding-inline: 4.8rem;
+    background-color: var( --amarelo);
+    border-radius: 15px;
+    cursor: pointer;
+
+    a {
+        color: var(--braco-gelo);
+        font-size: 3.2rem;
+        font-style: normal;
+        font-weight: 600;
+        
+    }
+}
+
+main{
+    display: flex;
+    gap: 11.1rem;
+    justify-content: center;
+ 
+}

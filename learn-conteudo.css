@@ -469,3 +469,8 @@ button#up {
     justify-content: row;
     cursor: pointer;
 }
+
+p {
+    text-align: justify;
+  }
+  
