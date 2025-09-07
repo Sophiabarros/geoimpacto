@@ -1,0 +1,79 @@
+@import url(./global.css);
+
+.app {
+    background-color: var(--azul-escuro);
+    width: 90%;
+    max-width:130rem;
+    margin-block: 15rem;
+    margin-inline: auto;
+    padding: 4rem;
+    border-radius: 15px;
+}
+
+.app h1 {
+    color: var(--braco-gelo);
+    font-size: 6rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border-bottom: 1px solid var(--braco-gelo);
+    padding-bottom: 3rem;
+}
+
+.quiz {
+    padding: 2rem 0;
+
+    h2 {
+        font-size: 4.8rem;
+        color: var(--cinza);
+        margin-bottom: 2rem;
+    }
+}
+
+.btn {
+    border: 3px solid var(--braco-gelo);
+    color: var(--verde-musgo);
+    background: var(--braco-gelo);
+    font-weight: 500;
+    width: 100%;
+    padding: 1rem;
+    padding-left: 2rem; 
+    margin: 1rem 0;
+    text-align: left;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+    height: 7rem;
+}
+
+.btn:hover:not([disabled]) {
+    background: var(--verde-musgo);
+    color: var(--braco-gelo);
+}
+
+.btn:disabled{
+    cursor: no-drop;
+}
+
+#next-btn{
+    background: var(--verde-musgo);
+    color: var(--braco-gelo);
+    font-weight: 500;
+    width: 20rem;
+    border: 0;
+    padding: 2rem;
+    margin: 2rem auto 0;
+    border-radius: 15px;
+    height: ¨¨rem;
+    cursor: pointer;
+}
+
+.correct {
+    background: #9aeabc;
+    color: var(--braco-gelo);
+}
+
+.incorrect {
+    background: #ff9393;
+    color: var(--braco-gelo);
+}

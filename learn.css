@@ -1,12 +1,21 @@
  @import url(./global.css);
- @import url(./footer.css);
- 
 
- main {
-    width: 107.3rem;
+ main{
     margin-inline: auto;
-    padding-inline: auto;
+    max-width: 130rem;
+    justify-content: center;
 
+    img {
+        width: 31.9rem;
+        height: 31.9rem;
+    }
+ }
+
+ .conteudo{
+    justify-content: center;
+    margin-inline: auto;
+    width: 109.7rem;
+    padding-inline: auto;
  }
 
 .h2{

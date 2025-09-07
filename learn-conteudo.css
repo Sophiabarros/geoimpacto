@@ -28,7 +28,7 @@ header {
     flex-direction: row;
     justify-content: space-between;
     margin-top: 2.5rem;
-    max-width: 90%;
+    max-width: 130rem;
     margin-inline: auto;
 }
 
@@ -137,6 +137,9 @@ span{
 .descricao {
     margin-left: 2.2rem;
 }
+.container {
+    height: 109rem;
+}
 
 .textos-intro {
     padding-top: 27.7rem;
@@ -177,6 +180,14 @@ hr {
     width: 100%rem;
     height: 0.4rem;
     margin-top: 5.7rem;
+    margin-bottom: 11.2rem;
+}
+
+.container {
+    max-width: 129.5rem;
+    min-width: none;
+    margin-inline: auto;
+    margin-bottom: 11.2rem;
 }
 
 section.oque {
@@ -207,7 +218,8 @@ section.oque {
 }
 
 .body  section{
-    max-width: 90%;
+    max-width: 129.5rem;
+    min-width: none;
     margin-inline: auto;
     justify-content: center;
     align-items: center;
@@ -249,11 +261,15 @@ section.terceira {
         border-radius: 15px;
         border: 7px solid #D9D9D9;
         background: rgba(217, 217, 217, 0.00);
-        width: 23.2rem;
+        width: 25.2rem;
         height: 36.2rem;
         text-align: center;
-        padding-inline: 1.4rem;
+        padding-inline: 1.6rem;
        
+        .p-3{
+            width: 20.4rem;
+            height: 18.6rem;
+        }
     }
 
     svg {
