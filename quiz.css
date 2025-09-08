@@ -4,7 +4,7 @@
     background-color: var(--azul-escuro);
     width: 90%;
     max-width:130rem;
-    margin-block: 15rem;
+    margin-top: 15rem;
     margin-inline: auto;
     padding: 4rem;
     border-radius: 15px;
@@ -76,4 +76,31 @@
 .incorrect {
     background: #ff9393;
     color: var(--braco-gelo);
+}
+
+.desistir {
+    margin-left: 6.5rem;
+    width: 50rem;
+}
+
+#desistir {
+    font-size: 2.6rem;
+    font-weight: 500;
+    color: var(--braco-gelo);
+    background-color: var(--verde-musgo);
+    border: 0;
+    border-radius: 15px;
+    padding 1rem;
+    width: 15rem;
+    height: 7rem;
+    margin-block: 5rem;
+    margin-inline: auto;
+    cursor: pointer;
+    
+}
+
+#desistir:hover {
+    transition: all 0.3s;
+    background: var(--amarelo);
+    
 }
