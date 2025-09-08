@@ -1,27 +1,25 @@
-
-
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family:  "Lexend", sans-serif;
+    font-family: "Lexend", sans-serif;
     font-size: 2.0rem;
 }
 
-:root{
+:root {
     --azul-escuro: #1E3D59;
     --azul-escuro-claro: #33516C;
     --amarelo: #F77F00;
     --amarelo-hover: #ec7a00;
     --braco-gelo: #F9F9F9;
-    --cinza-claro:#D9D9D9;
+    --cinza-claro: #D9D9D9;
     --cinza: #E5E5E5;
     --verde-musgo: #4A7C59;
     --cinza-escuro: #676767;
 
-    font-size: 62.5%; 
+    font-size: 62.5%;
 }
 
 body {
@@ -43,7 +41,6 @@ header {
     max-width: 130rem;
 }
 
-
 .logo img {
     height: 8rem;
     width: 8rem;
@@ -64,16 +61,16 @@ a {
     line-height: auto;
     font-weight: 600;
     color: var(--braco-gelo);
-} 
+}
 
 #active {
     color: var(--verde-musgo);
 }
 
 h2 {
-font-size: 4.8rem;
-font-style: normal;
-font-weight: 700;
+    font-size: 4.8rem;
+    font-style: normal;
+    font-weight: 700;
 }
 
 .verde {
@@ -82,11 +79,11 @@ font-weight: 700;
 
 footer {
     display: flex;
-    justify-content: center; 
-    align-items: center; 
+    justify-content: center;
+    align-items: center;
     padding-block: 1.8rem;
     background-color: var(--azul-escuro);
-    color: var(--braco-gelo);    
+    color: var(--braco-gelo);
     width: 100%;
     height: 6rem;
     gap: 11rem;
@@ -103,6 +100,7 @@ footer p {
     line-height: normal;
     margin-block: auto;
 }
+
 p #left {
     text-align: left;
 }
@@ -119,11 +117,6 @@ p #right {
     font-weight: bold;
 }
 
-
-
-
-
-
 .about-us {
     margin-bottom: 9.7rem;
 }
@@ -135,180 +128,152 @@ p #right {
     min-height: 62.2rem;
     background-color: var(--azul-escuro);
     padding: 4rem 2rem;
-  }
-  
-  .sobre-nos {
+}
+
+.sobre-nos {
     text-align: center;
     margin: 18.3rem 0 13.6rem 0;
-    color: var(--braco-gelo);    
-  }
-  
-  .sobre-nos h1 {
+    color: var(--braco-gelo);
+}
+
+.sobre-nos h1 {
     text-align: center;
     font-size: 9.6rem;
     font-weight: 700;
-    margin-top: 8.3rem;
-    margin-bottom: 2rem;
     margin: 0 auto;
-  }
+    margin-bottom: 2rem;
+    margin-top: 8.3rem;
+}
 
-  
-  
-  .sobre-nos p {
+.sobre-nos p {
     text-align: center;
     font-size: 2.4rem;
     font-weight: 700;
     height: 9rem;
     width: 89.3rem;
     margin: 0 auto;
-  }
-  
+}
 
-
-
-
-  .vivi {
-    margin: 0 2.65rem 0 0;
+.vivi,
+.lelet,
+.soso,
+.isa,
+.mily,
+.leal {
+    margin: 0 2.65rem;
     align-items: center;
-  }
-  
-    .lelet {
-    margin: 0 2.65rem 0 2.65rem;
-    align-items: center;
-  }
+}
 
-    .soso {
-    margin: 0 2.65rem 0 2.65rem;
-    align-items: center;
-  }
+.vivi {
+    margin-right: 2.65rem;
+}
 
-    .isa {
-    margin: 0 2.65rem 0 2.65rem;
-    align-items: center;
-  }
+.leal {
+    margin-left: 2.65rem;
+}
 
-    .mily {
-    margin: 0 2.65rem 0 2.65rem;
-    align-items: center;
-  }
-
-    .leal {
-    margin: 0 0 0 2.65rem;
-    align-items: center;
-  }
-
-    .us {
+.us {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 11.3rem 12.1rem 11.3rem;
-    margin-top: -8rem;
-  }
-  
-  .us > div {
+    margin: -8rem 11.3rem 12.1rem 11.3rem;
+}
+
+.us > div {
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  
-  .us img {
+}
+
+.us img {
     width: 15.8rem;
     height: 15.8rem;
     border-radius: 50%;
     margin-bottom: 1.55rem;
-  }
-  
-  .us span {
+}
+
+.us span {
     font-size: 3.2rem;
     font-weight: 600;
     color: var(--azul-escuro);
     margin-bottom: 0.5rem;
     margin-top: 1.55rem;
-  }
-  
-  .us p {
+}
+
+.us p {
     margin-top: 0.5rem;
     font-size: 2rem;
     color: var(--cinza-escuro);
-  }
-  
-  
+}
 
-
-  .texto-1 {
-  color: #000;
-  display: flex;
-  flex-direction: column; /* Coloca os elementos um abaixo do outro */
-  align-items: center;    /* Centraliza todo o bloco no meio */
-  justify-content: center;
-  text-align: center;     /* Textos centralizados por padrão */  
-  }
-  
-  .texto-1 h3 { 
-    display: flex;
-      text-align: left; 
-      font-size: 3.2rem; 
-      height: 8rem;
-      width: 66.1rem;
-      font-weight: 600; 
-      margin-bottom: 2.15rem;  
-      margin-right: 52.9rem; 
-   }
-
-   .text {
-    display: flex;
-    justify-content: center;
-   }
-
-   .text-1 p {
-    text-align: left;
-    width: 55.2rem;
-    height: 10rem;
-    margin: 2.15rem 5.45rem 0 0 ;
-   }
-
-   .text-2 p {
-    text-align: left;
-    width: 52.9rem;
-    height: 10rem;
-    margin: 2.15rem 0 0 5.45rem ;
-   }
-
-
-
-   
-
-
-   .contact-us {
-    margin-top: 9.7rem;
- 
-   }
-
-   .texto-2 {
+.texto-1 {
     color: #000;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Alinha verticalmente */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.texto-1 h3 {
+    display: flex;
+    text-align: left;
+    font-size: 3.2rem;
+    height: 8rem;
+    width: 66.1rem;
+    font-weight: 600;
+    margin-bottom: 2.15rem;
+    margin-right: 52.9rem;
+}
+
+.text {
+    display: flex;
+    justify-content: center;
+}
+
+.text-1 p {
+    text-align: left;
+    width: 55.2rem;
+    height: 10rem;
+    margin: 2.15rem 5.45rem 0 0;
+}
+
+.text-2 p {
+    text-align: left;
+    width: 52.9rem;
+    height: 10rem;
+    margin: 2.15rem 0 0 5.45rem;
+}
+
+.contact-us {
+    margin-top: 9.7rem;
+}
+
+.texto-2 {
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     text-align: center;
     margin-bottom: 7.5rem;
-   }
+}
 
-   .texto-2 h2 {
+.texto-2 h2 {
     height: 6rem;
     width: 29.9rem;
     font-size: 4.8rem;
     font-weight: 700;
     margin-bottom: 2.6rem;
-   }
+}
 
-   .texto-2 p {
+.texto-2 p {
     height: 5rem;
     width: 90.6rem;
-   }
+}
 
-   .contate-nos {
+.contate-nos {
     background: var(--azul-escuro);
     color: #FFF;
     border-radius: 15px;
@@ -316,18 +281,18 @@ p #right {
     width: 85.1rem;
     height: 81.7rem;
     margin: 0 3.9rem 11.4rem 4.8rem;
-   }
+}
 
-   .contate-nos h3 {
+.contate-nos h3 {
     font-size: 4.8rem;
     font-weight: 700;
     height: 5.7rem;
     width: 30.1rem;
     margin-bottom: 3.2rem;
-   }
+}
 
-   input,
-   textarea {
+input,
+textarea {
     border-radius: 15px;
     height: 5.6rem;
     width: 72.5rem;
@@ -335,62 +300,47 @@ p #right {
     border: none;
     padding: 1.275rem 0 0.925rem 2.4rem;
     color: var(--braco-gelo);
-    
-   }
+}
 
-   input::placeholder {
+input::placeholder,
+textarea::placeholder {
     color: #FFF;
     opacity: 50%;
     font-weight: 700;
     font-size: 2.4rem;
-   }
+}
 
-   textarea::placeholder {
-    color: #FFF;
-    opacity: 50%;
-    font-weight: 700;
-    font-size: 2.4rem;
-   }
-
-   label {
+label {
     margin-bottom: 1.2rem;
     margin-top: 1.6rem;
     height: 3.4rem;
     color: #FFF;
     font-size: 2.4rem;
     font-weight: 700;
-   }
+}
 
-   .nome {
+.nome,
+.email,
+.mensagem {
     display: flex;
     flex-direction: column;
-   }
+}
 
-   .nome label {
+.nome label {
     margin-top: 0;
 }
 
-
-   .email {
-    display: flex;
-    flex-direction: column;
-   }
-  
-
-   .mensagem {
-    display: flex;
-    flex-direction: column;
+.mensagem {
     margin-bottom: 3.2rem;
-   }
+}
 
-   .mensagem textarea {
+.mensagem textarea {
     height: 27.4rem;
-    padding: 1.3rem 2.4rem 0 2.4rem ;
+    padding: 1.3rem 2.4rem 0 2.4rem;
     resize: none;
-   }
+}
 
-
-   .contate-nos button {
+.contate-nos button {
     border: none;
     height: 7.2rem;
     width: 37.7rem;
@@ -398,127 +348,73 @@ p #right {
     color: var(--azul-escuro);
     font-size: 2.4rem;
     text-align: center;
-    padding: 2.1rem 0 2.1rem 0;
+    padding: 2.1rem 0;
 }
 
-
-
-
-
-
 .contato {
-  display: flex;
+    display: flex;
     justify-content: center;
-
 }
 
 .caixas {
     display: flex;
     flex-direction: column;
-    margin: 0 4.8rem 11.4rem 0 ;
+    margin: 0 4.8rem 11.4rem 0;
     min-width: 45.4rem;
     max-width: 55rem;
 }
 
-
-.telefone-caixa {
+.telefone-caixa,
+.email-caixa,
+.insta-caixa,
+.localizacao-caixa {
     background: var(--cinza-claro);
     border-radius: 15px;
     height: 17.4rem;
-    margin-block: 0 2rem;
     display: flex;
     padding: 3rem 1.8rem 3.1rem 1.8rem;
     align-items: center;
     justify-content: center;
+    margin-block: 2rem;
 }
 
-.text-numero {
-  text-align: center;
-
-  p {
-    font-size: 2rem;
-    color: #000;
-    font-weight: 400;
-  }
-}
-
-
-.email-caixa {
-  background: var(--cinza-claro);
-  border-radius: 15px;
-  height: 17.4rem;
-  margin-block: 2rem 2.05rem;
-  display: flex;
-  padding: 3rem 1.8rem 3.1rem 1.8rem;
-  align-items: center;
-  justify-content: center;
-}
-
-.text-email {
-  text-align: center;
-
-  p {
-    font-size: 2rem;
-    color: #000;
-    font-weight: 400;
-  }
-}
-
-.insta-caixa {
-  background: var(--cinza-claro);
-  border-radius: 15px;
-  height: 17.4rem;
-  margin-block: 2.05rem 2rem;
-  display: flex;
-  padding: 3rem 1.8rem 3.1rem 1.8rem;
-  align-items: center;
-  justify-content: center;
-}
-
-.text-insta {
-  text-align: center;
-
-  p {
-    font-size: 2rem;
-    color: #000;
-    font-weight: 400;
-  }
+.telefone-caixa {
+    margin-top: 0;
 }
 
 .localizacao-caixa {
-  background-color: var(--cinza-claro);
-  border-radius: 15px;
-  height: 17.4rem;
-  margin-block: 2rem 0;
-  display: flex;
-  padding: 3rem 1.8rem 3.1rem 1.8rem;
-  align-items: center;
-  justify-content: center;
-  
+    margin-bottom: 0;
 }
 
-.text-localizacao {
-  text-align: center;
-
-  p {
+.text-numero p,
+.text-email p,
+.text-insta p,
+.text-localizacao p {
     font-size: 2rem;
     color: #000;
     font-weight: 400;
-  }
+    text-align: center;
 }
 
-
 .svg {
-  margin-right: 2rem;
-  svg {
+    margin-right: 2rem;
+}
+
+.svg svg {
     min-height: 9.8rem;
     min-width: 9.8rem;
-  }
 }
 
 .strong {
-  margin-bottom: 0.4rem;
-  font-size: 2.4rem;
-  color: var(--azul-escuro);
-  min-height: 3rem;
+    margin-bottom: 0.4rem;
+    font-size: 2.4rem;
+    color: var(--azul-escuro);
+    min-height: 3rem;
+}
+
+button a {
+    color: var(--braco-gelo);
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 600;
 }
