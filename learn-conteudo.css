@@ -501,17 +501,26 @@ p {
 
   .selecao {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   gap: 2rem;
 
   padding: 2rem;
 
 
+    .row-s{
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        margin-inline: auto;
+    }
+
   button {
     background-color: var(--azul-escuro);
     padding: 2rem;
     cursor: pointer;
     width: 30rem;
+    border: none;
     border-radius: 1.5rem;
   }
 
