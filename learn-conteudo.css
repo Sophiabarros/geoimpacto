@@ -486,7 +486,13 @@ p {
   }
 
   button:hover{
-    background-color: var(--verde-musgo);
+    background-color: #162E43;
     transition: 0.5s;
   }
+
+ 
 }
+
+button#active{
+    background-color: var(--amarelo);
+  }

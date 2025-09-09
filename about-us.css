@@ -418,3 +418,7 @@ button a {
     font-style: normal;
     font-weight: 600;
 }
+
+button {
+    cursor: pointer;
+}
