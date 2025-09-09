@@ -79,11 +79,13 @@
 }
 
 .desistir {
-    margin-left: 6.5rem;
-    width: 50rem;
+   height: 13rem;
+   width: 90%;
+    max-width:130rem;
+    margin-inline: auto;
 }
 
-#desistir {
+#btn-desistir {
     font-size: 2.6rem;
     font-weight: 500;
     color: var(--braco-gelo);
@@ -99,7 +101,7 @@
     
 }
 
-#desistir:hover {
+#btn-desistir:hover {
     transition: all 0.3s;
     background: var(--amarelo);
     
