@@ -1,10 +1,7 @@
 @import url(global.css);
 
 :root {
-  /* Ajusta o tamanho base da fonte (62.5% = 10px → facilita usar rem) */
   font-size: 62.5%;
-
-  /* Paleta de cores definida no Figma */
   --azul-escuro: #1E3D59;
   --laranja-queimado: #F77F00;
   --braco-gelo: #F9F9F9;
@@ -12,7 +9,6 @@
   --verde-musgo: #4A7C59;
 }
 
-/* ===== RESET GERAL ===== */
 * {
   margin: 0;
   padding: 0;
@@ -26,26 +22,24 @@ body {
   line-height: 1.6;
 }
 
-/* ===== TÍTULOS DA PÁGINA ===== */
 .title {
-  text-align: center;               /* centraliza os títulos */
-  margin: 6rem auto 8rem;           /* espaçamento em cima e embaixo */
+  text-align: center;
+  margin: 6rem auto 8rem;
   max-width: 80rem; 
-  color: #000000;                /* limita a largura */
+  color: #000000;
 }
 
 .title h2 {
-  font-size: 3.6rem;                /* título principal grande */
+  font-size: 3.6rem;
   font-weight: 700;
   margin-bottom: 0.1rem;
 }
 
 .title h3 {
-  font-size: 1.8rem;                /* subtítulo menor */
+  font-size: 1.8rem;
   font-weight: 400;
 }
 
-/* ===== CONTAINER DA TIMELINE ===== */
 .timeline {
   position: relative;
   width: 90%;
@@ -54,27 +48,24 @@ body {
   padding: 4rem 0;
 }
 
-/* Linha central da timeline */
 .timeline::before {
   content: "";
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 50%;                        /* posiciona no meio */
-  width: 1rem;                    /* espessura da linha */
+  left: 50%;
+  width: 1rem;
   background: var(--azul-escuro);
-  transform: translateX(-50%);      /* centraliza exatamente */
+  transform: translateX(-50%);
 }
 
-/* ===== SECTIONS (cada evento) ===== */
 .timeline section {
   display: flex;
-  justify-content: space-between;   /* separa imagem ↔ texto */
-  margin: 8rem 0;                   /* espaço entre seções */
+  justify-content: space-between;
+  margin: 8rem 0;
   position: relative;
 }
 
-/* Define a largura de texto e imagem */
 .timeline section.left .text,
 .timeline section.left .image,
 .timeline section.right .text,
@@ -82,48 +73,36 @@ body {
   width: 35%;
 }
 
-/* ===== BOLINHAS DA TIMELINE ===== */
-.left .dot {
-  position: absolute;               /* fica por cima da linha */
-  top: 50%;                         /* centraliza verticalmente */
-  left: 50%;                        /* centraliza horizontalmente */
-  transform: translate(-50%, -50%); /* move pro centro exato */
-  background: var(--azul-escuro); 
-  width: 2.9rem;
-  height: 2.9rem;
-  border-radius: 50%;               /* deixa circular */
-  border: 0.4rem solid var(--branco-gelo); /* aro branco / / contorno azul */
-  z-index: 3;                       /* fica acima da linha */
-}
-
+.left .dot,
 .right .dot {
-  position: absolute;               /* fica por cima da linha */
-  top: 50%;                         /* centraliza verticalmente */
-  left: 50%;                        /* centraliza horizontalmente */
-  transform: translate(-50%, -50%); /* move pro centro exato */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background: var(--verde-musgo); 
   width: 2.9rem;
   height: 2.9rem;
-  border-radius: 50%;               /* deixa circular */
-  border: 0.4rem solid var(--branco-gelo); /* aro branco / / contorno azul */
-  z-index: 3;                       /* fica acima da linha */
+  border-radius: 50%;
+  border: 0.4rem solid var(--branco-gelo);
+  z-index: 3;
 }
-/* ===== BLOCO DE TEXTO ===== */
+
 .text {
   color: #FFFF;
   width: 30%;
   padding: 2.4rem;
   border-radius: 1.2rem;
-  box-shadow: 0 0.6rem 1.6rem rgba(0,0,0,0.1); /* sombra leve */
-  
+  box-shadow: 0 0.6rem 1.6rem rgba(0,0,0,0.1);
 }
 
-.left .text{
- background-color: var(--azul-escuro);
+.left .text {
+  background-color: var(--azul-escuro);
 }
+
 .right .text {
   background-color: var(--verde-musgo);
 }
+
 .text h3 {
   font-size: 1.8rem;
   font-weight: 600;
@@ -132,11 +111,10 @@ body {
 
 .text p {
   font-size: 1.4rem;
-  text-align: justify;              /* texto alinhado dos dois lados */
+  text-align: justify;
   line-height: 1.8;
 }
 
-/* ===== BLOCO DE IMAGEM ===== */
 .image img {
   width: 100%;
   border-radius: 2.5rem;
