@@ -37,7 +37,7 @@ body {
 .title h2 {
   font-size: 3.6rem;                /* título principal grande */
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 0.1rem;
 }
 
 .title h3 {
