@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:  "Lexend", sans-serif;
+    font-size: 2.0rem;
+}
+
+:root{
+    --azul-escuro: #1E3D59;
+    --amarelo: #F77F00;
+    --amarelo-hover: #ec7a00;
+    --braco-gelo: #F9F9F9;
+    --cinza: #E5E5E5;
+    --cinza-azul: #d9d9d9;
+    --verde-musgo: #4A7C59;
+
+    font-size: 62.5%; 
+}
+
+body {
+    margin-inline: auto;
+    justify-content: center;
+    max-width: 130rem;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2.5rem;
+    max-width: 130rem;
+}
+
+p {
+    text-align: justify;
+  }
+  
+
+.logo img {
+    height: 8rem;
+    width: 8rem;
+}
+
+.a {
+    display: flex;
+    gap: 2.5rem;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    font-size: 3.2rem;
+    text-decoration: none;
+    line-height: auto;
+    font-weight: 600;
+    color: var(--azul-escuro);
+} 
+
+#active {
+    color: var(--verde-musgo);
+}
+
+h2 {
+font-size: 4.8rem;
+font-style: normal;
+font-weight: 700;
+}
+
+.verde {
+    color: var(--verde-musgo);
+}
+
+footer {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding-block: 1.8rem;
+    background-color: var(--azul-escuro);
+    color: var(--braco-gelo);    
+    width: 100%;
+    height: 6rem;
+    gap: 11rem;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+footer p {
+    color: var(--braco-gelo);
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin-block: auto;
+}
+p #left {
+    text-align: left;
+}
+
+p #center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+p #right {
+    text-align: right;
+    font-weight: bold;
+}
+
+
+
+
+
+
+.leaderboard {
+    display: flex;
+  flex-direction: column;  
+  justify-content: center; 
+  align-items: center; 
+}
+
+.title h1 {
+    margin: 6.7rem 34.9rem 4.7rem 34.8rem;
+    font-size: 9.6rem;
+    font-weight: 700;
+    color: var(--verde-musgo);
+}
+
+.title strong {
+    font-size: 9.6rem;
+    font-weight: 700;
+    color: var(--azul-escuro);
+}
+
+.ranking {
+    display: flex;
+    justify-content: center;
+}
+
+.ranking p {
+    font-size: 3.2rem;
+    font-weight: 600;
+}
+
+
+.segundo {
+    display: flex;
+  flex-direction: column;   
+  align-items: center;      
+  justify-content: center;
+  margin: 12.5rem 14.7rem 18.6rem 0;
+}
+
+.segundo p {
+    color: var(--azul-escuro);
+}
+
+.segundo-foto {
+    border: 19px solid var(--cinza-azul);
+    border-radius: 50%;
+    overflow: hidden;
+    width: 16.8rem;
+    height: 16.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cinza-azul);
+    margin: 1.3rem 0 1.3rem 0;
+}
+
+.segundo-foto img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.segundo-foto svg {
+    width: 3.6rem;
+    height: 3.6rem;
+}
+
+
+.primeiro {
+    display: flex;
+  flex-direction: column;   
+  align-items: center;     
+  justify-content: center;
+  margin: 0 14.4rem 24.2rem 0;
+}
+
+.primeiro p {
+    color: var(--amarelo);
+}
+
+.primeiro-foto {
+    border: 18px solid var(--cinza-azul);
+    border-radius: 50%;
+    overflow: hidden;
+    width: 21.9rem;
+    height: 21.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cinza);
+    margin: 1.3rem 0 1.3rem 0;
+}
+
+.primeiro-foto img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.primeiro-foto svg {
+    width: 3.6rem;
+    height: 3.6rem;
+}
+
+.terceiro {
+    display: flex;
+  flex-direction: column;  
+  align-items: center;    
+  justify-content: center;
+  margin: 12.5rem 0 18.6rem 0;
+}
+
+.terceiro p {
+    color: var(--azul-escuro);
+}
+
+
+.terceiro-foto {
+    border: 19px solid var(--cinza-azul);
+    border-radius: 50%;
+    overflow: hidden;
+    width: 16.8rem;
+    height: 16.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cinza-azul);
+    margin: 1.3rem 0 1.3rem 0;
+}
+
+.terceiro-foto img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.terceiro-foto svg {
+    width: 3.6rem;
+    height: 3.6rem;
+}
+
+
+.user {
+    margin-top: 2.6rem;
+}
+
+.user-primeiro {
+    margin-top: 1.4rem;
+}

@@ -61,7 +61,7 @@ header {
 button {
     height: 6.8rem;
     width: 49.8rem;
-    margin-top: 2.6rem;
+    margin-top: 5.2rem;
     border: none;
     padding-block: 1.4rem;
     padding-inline: 4.8rem;
@@ -82,4 +82,52 @@ main {
     display: flex;
     gap: 11.1rem;
     justify-content: center;
+}
+
+.botao {
+    margin-top: 2.1rem;
+    display: flex;
+    width: 64.7rem;
+    flex-direction: column;
+    
+    .podio {
+
+        .h3{
+            display: flex;
+            flex-direction: row;    
+            margin-bottom: 1rem;       
+        }
+
+        h3 {
+            font-size: 2.8rem;
+            text-transform: uppercase;
+            color: var(--azul-escuro);
+        }
+        #verde{
+            color: var(--verde-musgo);
+        }
+    }
+
+    
+
+    .botoes {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    button{
+    margin-top: 2rem;
+    border-radius: 15px;
+    background-color: var(--verde-musgo);
+    height: 6.8rem;
+    width: 30rem;
+    padding-block: 0.2rem;
+
+    font-size: 1.6rem;
+    font-weight: 650;
+    color: var(--branco);
+
+    }
+ 
 }
