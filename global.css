@@ -14,10 +14,7 @@
     --amarelo-hover: #ec7a00;
     --braco-gelo: #F9F9F9;
     --cinza: #E5E5E5;
-<<<<<<< HEAD
-=======
     --branco: #FFFFFF;
->>>>>>> 2b14232 (criação da página de login, pódio e modificações na página de games.)
     --verde-musgo: #4A7C59;
 
     font-size: 62.5%; 
@@ -78,6 +75,8 @@ font-weight: 700;
 .verde {
     color: var(--verde-musgo);
 }
+
+
 
 footer {
     display: flex;
