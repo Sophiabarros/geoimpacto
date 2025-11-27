@@ -321,7 +321,7 @@ async function salvarPontuacao(scoreFinal) {
     }
 
     try {
-        const response = await fetch("http://localhost:3333/score", {
+        const response = await fetch("https://backend-geoimpacto.vercel.app/score", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({

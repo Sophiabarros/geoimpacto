@@ -25,7 +25,7 @@ async function cadastrar() {
     };
 
     try {
-        const response = await fetch("http://localhost:3333/register", {
+        const response = await fetch("https://backend-geoimpacto.vercel.app/register", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(data)

@@ -6,7 +6,7 @@ span.textContent = user ? user.nome : "";
 // Atualiza o ranking
 async function atualizarRanking() {
   try {
-    const response = await fetch("http://localhost:3333/ranking"); // ajuste a URL
+    const response = await fetch("https://backend-geoimpacto.vercel.app/ranking"); // ajuste a URL
     if (!response.ok) throw new Error("Falha ao carregar o ranking");
 
     const ranking = await response.json();
