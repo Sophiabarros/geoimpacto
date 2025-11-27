@@ -54,13 +54,18 @@ li {
     list-style: none;
 }
 
-a {
+a, #user-name  {
     font-size: 3.2rem;
     text-decoration: none;
     line-height: auto;
     font-weight: 600;
+    text-transform: uppercase;
     color: var(--azul-escuro);
 } 
+
+ #user-name {
+    color: #5B6483;
+ }
 
 #active {
     color: var(--verde-musgo);
