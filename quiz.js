@@ -1,4 +1,22 @@
+document.addEventListener("DOMContentLoaded", () => {
+    const user = JSON.parse(sessionStorage.getItem("user"));
+
+    if (!user || !user.id) {
+        alert("Você precisa estar logado para jogar!");
+        window.location.href = "./login.html";
+        return;
+    }
+
+    startQuiz();
+});
+
+
+// =========================================
+// QUIZ ORIGINAL (NÃO MEXI NO ARRAY 👍)
+// =========================================
+
 const questions = [
+    // --- SEU ARRAY COMPLETO AQUI (NÃO ALTERADO) ---
     {
         question: "O que é o 'olho' de um furacão?",
         answers: [
@@ -169,18 +187,18 @@ const questions = [
             { id: 3, text: "Proteção da fauna local", correct: false },
             { id: 4, text: "Resfriamento da atmosfera", correct: false }
         ]
-    }, 
+    },
     {
-    question: "Qual medida ajuda a prevenir enchentes em áreas urbanas?",
-    answers: [
-        { id: 1, text: "Evitar o plantio de árvores", correct: false },
-        { id: 2, text: "Descarte de lixo em ruas e rios", correct: false },
-        { id: 3, text: "Investir em sistemas de drenagem e áreas verdes", correct: true },
-        { id: 4, text: "Construir casas sobre rios", correct: false }
-    ]
-}
-
+        question: "Qual medida ajuda a prevenir enchentes em áreas urbanas?",
+        answers: [
+            { id: 1, text: "Evitar o plantio de árvores", correct: false },
+            { id: 2, text: "Descarte de lixo em ruas e rios", correct: false },
+            { id: 3, text: "Investir em sistemas de drenagem e áreas verdes", correct: true },
+            { id: 4, text: "Construir casas sobre rios", correct: false }
+        ]
+    }
 ];
+
 
 const questionElement = document.getElementById("question");
 const answerButtonsElement = document.getElementById("answer-buttons");
@@ -188,6 +206,7 @@ const nextButton = document.getElementById("next-btn");
 
 let currentQuestionIndex = 0;
 let score = 0;
+
 
 function startQuiz() {
     currentQuestionIndex = 0;
@@ -216,14 +235,14 @@ function showQuestion() {
     let questionNo = currentQuestionIndex + 1;
     questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
 
-    shuffleArray(currentQuestion.answers); // embaralha as respostas
+    shuffleArray(currentQuestion.answers);
 
     currentQuestion.answers.forEach((answers) => {
         const button = document.createElement("button");
         button.innerHTML = answers.text;
-        button.dataset.id = answers.id; 
-        button.classList.add("btn")
-        button.addEventListener("click", selectAnswer)
+        button.dataset.id = answers.id;
+        button.classList.add("btn");
+        button.addEventListener("click", selectAnswer);
         answerButtonsElement.appendChild(button);
     });
 }
@@ -251,13 +270,15 @@ function selectAnswer(e) {
 
     nextButton.style.display = "block";
     nextButton.classList.remove("show");
-
 }
 
 function showScore() {
     resetState();
     questionElement.innerHTML = `Você acertou ${score} de ${questions.length}!`;
-    nextButton.innerHTML = "Jogue denovo";
+
+    salvarPontuacao(score);
+
+    nextButton.innerHTML = "Jogue novamente";
     nextButton.style.display = "block";
 }
 
@@ -278,4 +299,38 @@ nextButton.addEventListener("click", () => {
     }
 });
 
-startQuiz();
+
+// =========================================
+// SALVAR PONTUAÇÃO NO BANCO
+// =========================================
+async function salvarPontuacao(scoreFinal) {
+    const user = JSON.parse(sessionStorage.getItem("user"));
+
+    if (!user || !user.id) {
+        alert("Erro: usuário não identificado.");
+        window.location.href = "./login.html";
+        return;
+    }
+
+    try {
+        const response = await fetch("http://localhost:3333/score", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                user_id: user.id,
+                score: scoreFinal
+            })
+        });
+
+        if (!response.ok) {
+            alert("Erro ao salvar pontuação.");
+            return;
+        }
+
+        alert("Pontuação salva com sucesso!");
+
+    } catch (error) {
+        console.error("Erro ao salvar score:", error);
+        alert("Não foi possível salvar a pontuação.");
+    }
+}

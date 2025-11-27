@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <link rel="icon" href="fotos/G.png" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="desistir.js" defer></script>
     <script src="quiz.js" defer></script>
     <link rel="stylesheet" href="quiz.css">
     <title>GeoImpacto - Quiz</title>
@@ -18,41 +17,41 @@
         <ul>
           <div class="a">
             <li><a href="./learn.html" id="active">LEARN</a></li>
-           <li><a href="./games.html">GAMES</a></li>
+            <li><a href="./games.html">GAMES</a></li>
             <li><a href="about-us.html">ABOUT US</a></li>
-           <li><a href="about-us.html">CONTACT US</a></li>
+            <li><a href="about-us.html">CONTACT US</a></li>
+            <span id="user-name"></span>
           </div>
         </ul>
       </nav>
     </header>
 
+    <script>
+      // BLOQUEIO DE ACESSO SEM LOGIN
+      const user = JSON.parse(sessionStorage.getItem("user"));
+      if (!user) {
+        window.location.href = "login.html";
+      } else {
+        document.getElementById("user-name").textContent = user.nome;
+      }
+    </script>
+
     <div class="app">
         <h1>Desastres Naturais – Teste sua Coragem!</h1>
         <div class="quiz">
             <h2 id="question">Question goes here</h2>
-            <div id="answer-buttons">
-                    <button class="btn">text</button>
-                    <button class="btn">text</button>
-                    <button class="btn">text</button>
-                    <button class="btn">text</button>
-                    <button class="btn">text</button>   
-         </div>
+            <div id="answer-buttons"></div>
 
             <button id="next-btn">
                 Next
             </button>
         </div>
-        
-        
-
     </div>
 
     <div class="desistir">
       <button id="btn-desistir">
-      Desistir
-    </button>
-    </div>
-
+        Desistir
+      </button>
     </div>
 
 </body>

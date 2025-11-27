@@ -66,11 +66,15 @@ form {
     font-weight: 700;
   }
 
-  p {
+  p, #link {
     margin-top: 0.4rem;
     text-align: center;
     font-size: 2rem;
     font-weight: 400;
+  }
+
+  #link{
+    color: var(--amarelo);
   }
 
   button {

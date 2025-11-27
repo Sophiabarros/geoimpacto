@@ -19,10 +19,22 @@
            <li><a href="./games.html">GAMES</a></li>
             <li><a href="./about-us.html">ABOUT US</a></li>
            <li><a href="./about-us.html">CONTACT US</a></li>
-          </div>
+          <span id="user-name"></span>
+            </div>
         </ul>
-      </nav>
-    </header>
+    </nav>
+</header>
+
+<script>
+    const user = JSON.parse(sessionStorage.getItem("user"));
+    const span = document.getElementById("user-name");
+
+    if (user) {
+        span.textContent = user.nome;
+    } else {
+        span.textContent = "";
+    }
+</script>
 
     <div class="conteudo">
         

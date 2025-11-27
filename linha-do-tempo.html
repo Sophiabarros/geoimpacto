@@ -4,39 +4,53 @@
     <meta charset="UTF-8">
     <link rel="icon" href="fotos/G.png" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="linha-do-tempo.css">
-    <link
-    rel="stylesheet"
-    type="text/css"
-    href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"/>
-  <link
-    rel="stylesheet"
-    type="text/css"
-    href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"/>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"/>
+
     <title>GeoImpacto - Linha do tempo</title>
-
-     <header>
-      <div class="logo">
-        <img src="./fotos/logo.png" alt="Logo GeoImpacto">
-      </div>
-      <nav>
-        <ul>
-          <div class="a">
-            <li><a href="./learn.html">LEARN</a></li>
-           <li><a href="./games.html">GAMES</a></li>
-            <li><a href="./about-us.html">ABOUT US</a></li>
-           <li><a href="./about-us.html">CONTACT US</a></li>
-          </div>
-        </ul>
-      </nav>
-    </header>
-
 </head>
-  <body>
-    
+
+<body>
+
+<header>
+    <div class="logo">
+        <a href="index.html"><img src="./fotos/logo.png" alt="Logo GeoImpacto"></a>
+    </div>
+
+    <nav>
+        <ul>
+            <div class="a">
+                <li><a href="./learn.html">LEARN</a></li>
+                <li><a href="./games.html">GAMES</a></li>
+                <li><a href="./about-us.html">ABOUT US</a></li>
+                <li><a href="./about-us.html">CONTACT US</a></li>
+
+                <span id="user-name"></span>
+            </div>
+        </ul>
+    </nav>
+</header>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const user = JSON.parse(sessionStorage.getItem("user"));
+    const span = document.getElementById("user-name");
+
+    if (user && user.nome) {
+        span.textContent = user.nome;
+    } else {
+        span.textContent = "";
+    }
+});
+</script>
+
     <div class="container">
     <div class="title">
       <h2>Linha do tempo</h2>

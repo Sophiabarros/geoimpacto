@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="login-cadastro.css">
-    <script src="login.js" defer></script>
-    <title>Login - GeoImpacto</title>
+    <script src="cadastro.js" defer></script>
+    <title>Cadastro - GeoImpacto</title>
 </head>
 <body>
     <header>
@@ -17,10 +17,18 @@
     <div class="entrar">
        <div class="entrar-form">
          <h2>
-            Entrar
+            Registre-se
         </h2>
 
         <form action="">
+            <div>
+                <label for="nome">Nome: </label>
+                <input type="text" name="nome" id="nome" placeholder="Digite seu nome...">
+            </div>
+            <div>
+                <label for="sobrenome">Sobrenome: </label>
+                <input type="text" name="sobrenome" id="sobrenome" placeholder="Digite seu sobrenome...">
+            </div>
             <div>
                 <label for="email">Email: </label>
                 <input type="text" name="email" id="email" placeholder="Digite seu email...">
@@ -30,13 +38,13 @@
                 <input type="text" name="senha" id="senha" placeholder="Digite sua senha...">
             </div>
 
-            <p>
-                Não possui uma conta? <a href="cadastro.html" id="link">Registre-se</a>
-            </p>
-
-            <button>
-                Entre novamente >
+             <button>
+                Junte-se a nós >
             </button>
+
+            <p>
+                <a href="login.html" id="link">Entre</a> com uma conta existente            
+            </p>
         </form>
        </div>
 

@@ -8,22 +8,35 @@
     <link rel="stylesheet" href="./games.css">
 </head>
 <body>
-    <header>
-        <div class="logo">
-         <a href="./index.html"> <img src="./fotos/logo.png" alt="Logo GeoImpacto"></a>
-        </div>
-        <nav>
-          <ul>
+  
+<header>
+    <div class="logo">
+        <a href="./index.html"><img src="./fotos/logo.png" alt="Logo GeoImpacto"></a>
+    </div>
+    <nav>
+        <ul>
             <div class="a">
-              <li><a href="./learn.html">LEARN</a></li>
-             <li><a href="./games.html" id="active">GAMES</a></li>
-              <li><a href="./about-us.html">ABOUT US</a></li>
-             <li><a href="./about-us.html">CONTACT US</a></li>
+                <li><a href="./learn.html">LEARN</a></li>
+                <li><a href="./games.html" id="active">GAMES</a></li>
+                <li><a href="./about-us.html">ABOUT US</a></li>
+                <li><a href="./about-us.html">CONTACT US</a></li>
+                <span id="user-name"></span>
             </div>
-          </ul>
-        </nav>
-      </header>
-    
+        </ul>
+    </nav>
+</header>
+
+<script>
+    const user = JSON.parse(sessionStorage.getItem("user"));
+    const span = document.getElementById("user-name");
+
+    if (user) {
+        span.textContent = user.nome;
+    } else {
+        span.textContent = "";
+    }
+</script>
+
      <main>
 
         <div class="conteudo">
