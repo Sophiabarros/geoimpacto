@@ -34,7 +34,11 @@ async function cadastrar() {
         const resData = await response.json();
 
         if (!response.ok) {
-            alert(resData.message || "Erro ao cadastrar.");
+            if (resData.message && resData.message.toLowerCase().includes("email")) {
+                alert("Este e-mail já está em uso. Escolha outro.");
+            } else {
+                alert(resData.message || "Erro ao cadastrar.");
+            }
             return;
         }
 

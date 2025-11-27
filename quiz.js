@@ -299,6 +299,14 @@ nextButton.addEventListener("click", () => {
     }
 });
 
+const quitButton = document.getElementById("quit-btn");
+
+quitButton.addEventListener("click", () => {
+    if (confirm("Tem certeza que deseja desistir? Sua pontuação não será salva.")) {
+        window.location.href = "./games.html"; // ou outra página de destino
+    }
+});
+
 
 // =========================================
 // SALVAR PONTUAÇÃO NO BANCO

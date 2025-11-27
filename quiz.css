@@ -76,16 +76,14 @@
 .incorrect {
     background: #ff9393;
     color: var(--braco-gelo);
-}
-
-.desistir {
+}.desistir {
    height: 13rem;
    width: 90%;
-    max-width:130rem;
-    margin-inline: auto;
+   max-width: 130rem;
+   margin-inline: auto;
 }
 
-#btn-desistir {
+#quit-btn {
     font-size: 2.6rem;
     font-weight: 500;
     color: var(--braco-gelo);
@@ -96,13 +94,10 @@
     width: 15rem;
     height: 7rem;
     margin-block: 5rem;
-    margin-inline: auto;
     cursor: pointer;
-    
 }
 
-#btn-desistir:hover {
+#quit-btn:hover {
     transition: all 0.3s;
-    background: var(--amarelo);
-    
+    background-color: var(--amarelo);
 }

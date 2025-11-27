@@ -59,12 +59,12 @@ a, #user-name  {
     text-decoration: none;
     line-height: auto;
     font-weight: 600;
-    text-transform: uppercase;
     color: var(--azul-escuro);
 } 
 
  #user-name {
     color: #5B6483;
+    text-transform: uppercase;
  }
 
 #active {
