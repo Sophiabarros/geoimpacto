@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Teste seus conhecimentos sobre desastres naturais.">
+  <meta name="theme-color" content="#1E3D59">
+  <title>Quiz · GeoImpacto</title>
+  <link rel="icon" href="../assets/img/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/components/podium.css">
+  <link rel="stylesheet" href="../assets/css/pages/quiz.css">
+  <script src="../assets/js/config.js" defer></script>
+  <script src="../assets/js/api.js" defer></script>
+  <script src="../assets/js/layout.js" defer></script>
+  <script src="../assets/js/podium.js" defer></script>
+  <script src="../assets/js/pages/quiz.js" defer></script>
+</head>
+<body data-requires-login>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+<header class="site-header">
+  <div class="container">
+    <a class="logo" href="../index.html" aria-label="GeoImpacto — página inicial">
+      <img src="../assets/img/logo.webp" alt="" width="80" height="80">
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menu"><span></span></button>
+    <nav class="site-nav" id="site-nav" aria-label="Principal">
+      <ul>
+        <li><a href="../pages/learn.html">Learn</a></li>
+        <li><a href="../pages/games.html" aria-current="page">Games</a></li>
+        <li><a href="../pages/about-us.html">About us</a></li>
+        <li><a href="../pages/about-us.html#contato">Contact us</a></li>
+        <li class="nav-account" data-account></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="conteudo" class="container quiz-page">
+  <section class="quiz-card" aria-labelledby="quiz-title">
+    <h1 id="quiz-title">Desastres Naturais – Teste sua Coragem!</h1>
+
+    <div class="quiz-progress">
+      <span id="quiz-progress">Carregando…</span>
+      <div class="quiz-progress__track"><div class="quiz-progress__bar" id="quiz-progress-bar"></div></div>
+    </div>
+
+    <div class="quiz-body" aria-live="polite">
+      <h2 id="question"></h2>
+      <div class="answers" id="answer-buttons"></div>
+      <p class="form-message" id="quiz-feedback" hidden></p>
+    </div>
+
+    <button class="btn btn--verde quiz-next" id="next-btn" type="button" hidden>Próxima</button>
+  </section>
+
+  <section class="quiz-result" id="quiz-result" aria-labelledby="resultado-titulo" hidden>
+    <h2 id="resultado-titulo" class="visually-hidden">Seu resultado</h2>
+    <div class="stats" id="quiz-stats" aria-live="polite"></div>
+    <h2 class="quiz-result__podium-title">Pódio atualizado</h2>
+    <div class="podium-wrap" id="quiz-podium" data-podium data-podium-lazy></div>
+  </section>
+
+  <div class="quiz-actions">
+    <button class="btn btn--verde quit-btn" id="quit-btn" type="button">Desistir</button>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <p>Educação para um planeta mais consciente</p>
+    <p>© 2025 GeoImpacto. Todos os direitos reservados.</p>
+    <p><strong>GeoImpacto</strong></p>
+  </div>
+</footer>
+</body>
+</html>

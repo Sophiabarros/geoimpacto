@@ -1,0 +1,108 @@
+/* ==========================================================================
+   Learn — lista de temas (pages/learn.html)
+   ========================================================================== */
+
+.learn {
+  max-width: calc(113rem + var(--gutter) * 2);
+}
+
+.learn-title {
+  font-size: var(--fs-h2);
+  font-weight: 700;
+  margin-block: clamp(1.6rem, 3vw, 3.2rem) clamp(2.6rem, 4vw, 4rem);
+}
+
+.topic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 28rem), 1fr));
+  gap: clamp(3.2rem, 4.5vw, 5.6rem);
+}
+
+.topic-card {
+  display: block;
+}
+
+.topic-card img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.45s var(--ease), box-shadow 0.45s var(--ease);
+}
+
+.topic-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.6rem;
+  margin-top: 1.8rem;
+}
+
+.topic-card h3 {
+  font-size: clamp(2rem, 0.8vw + 1.6rem, 2.6rem);
+}
+
+.topic-card svg {
+  flex: none;
+  color: var(--laranja);
+  transition: transform 0.35s var(--ease);
+}
+
+.topic-card:hover img {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.topic-card:hover svg {
+  transform: translateX(6px);
+}
+
+/* Celular: grade de 2 colunas compacta em vez de 6 cartões de tela cheia */
+@media (max-width: 600px) {
+  .learn-title {
+    margin-block: 1.6rem 2rem;
+  }
+
+  .topic-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem 1.2rem;
+  }
+
+  .topic-card img {
+    aspect-ratio: 4 / 3;
+  }
+
+  .topic-card__footer {
+    gap: 0.8rem;
+    margin-top: 0.8rem;
+  }
+
+  .topic-card h3 {
+    font-size: 1.5rem;
+    line-height: 1.25;
+  }
+
+  .topic-card svg {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+.timeline-cta {
+  margin-top: clamp(5rem, 7vw, 8rem);
+  min-height: 8.3rem;
+  font-weight: 700;
+  font-size: clamp(1.7rem, 0.8vw + 1.4rem, 2.4rem);
+}
+
+@media (max-width: 600px) {
+  .timeline-cta {
+    margin-top: 3.2rem;
+    min-height: 0;
+    padding: 1.6rem 2rem;
+    font-size: 1.6rem;
+    text-align: left;
+    justify-content: flex-start;
+  }
+}

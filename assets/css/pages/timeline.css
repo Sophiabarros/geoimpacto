@@ -1,0 +1,205 @@
+/* ==========================================================================
+   Linha do tempo (pages/linha-do-tempo.html)
+   Desktop: imagem e texto alternam lados. Celular: linha à esquerda.
+   ========================================================================== */
+
+.timeline-head {
+  max-width: 80rem;
+  margin: clamp(2rem, 4vw, 6rem) auto clamp(4rem, 6vw, 8rem);
+  text-align: center;
+}
+
+.timeline-head h1 {
+  margin-top: 1rem;
+  font-size: var(--fs-h2);
+  font-weight: 700;
+}
+
+.timeline {
+  position: relative;
+  max-width: 120rem;
+  margin-inline: auto;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 0.8rem;
+  border-radius: var(--radius-pill);
+  background: var(--azul-escuro);
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 8rem minmax(0, 1fr);
+  align-items: center;
+  margin-block: clamp(4rem, 7vw, 8rem);
+}
+
+.timeline-media {
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: end;
+  width: min(100%, 44rem);
+}
+
+.timeline-dot {
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: center;
+  z-index: 1;
+  width: 2.9rem;
+  height: 2.9rem;
+  border: 0.5rem solid var(--gelo);
+  border-radius: 50%;
+  background: var(--verde-musgo);
+  box-shadow: 0 0 0 3px var(--verde-musgo);
+}
+
+.timeline-card {
+  grid-column: 3;
+  grid-row: 1;
+  width: min(100%, 44rem);
+  padding: clamp(2rem, 2.4vw, 2.8rem);
+  border-radius: var(--radius-sm);
+  background-color: var(--azul-escuro);
+  color: var(--branco);
+  box-shadow: var(--shadow-md);
+  transition: transform 0.35s var(--ease), box-shadow 0.35s ease;
+}
+
+.timeline-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* itens pares: texto à esquerda (verde), imagem à direita */
+.timeline-item:nth-child(even) .timeline-media {
+  grid-column: 3;
+  justify-self: start;
+}
+
+.timeline-item:nth-child(even) .timeline-card {
+  grid-column: 1;
+  justify-self: end;
+  background-color: var(--verde-musgo);
+}
+
+.timeline-item:nth-child(even) .timeline-dot {
+  background: var(--azul-escuro);
+  box-shadow: 0 0 0 3px var(--azul-escuro);
+}
+
+.timeline-year {
+  display: inline-block;
+  margin-bottom: 0.8rem;
+  padding: 0.2rem 1.2rem;
+  border-radius: var(--radius-pill);
+  background: var(--laranja);
+  font-size: var(--fs-small);
+  font-weight: 700;
+}
+
+.timeline-card h2 {
+  margin-bottom: 1.2rem;
+  font-size: clamp(1.8rem, 0.6vw + 1.5rem, 2.2rem);
+  font-weight: 600;
+  color: var(--branco);
+}
+
+.timeline-card p {
+  font-size: var(--fs-small);
+  line-height: 1.75;
+}
+
+.timeline-media img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 2.4rem;
+  box-shadow: var(--shadow-md);
+}
+
+.timeline-actions {
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  .timeline::before {
+    left: 1.2rem;
+    transform: none;
+    width: 0.5rem;
+  }
+
+  .timeline-head {
+    margin: 1.6rem auto 3.2rem;
+  }
+
+  .timeline-head h1 {
+    font-size: 2.6rem;
+  }
+
+  /* foto e texto viram um único card */
+  .timeline-item {
+    grid-template-columns: 3.6rem minmax(0, 1fr);
+    row-gap: 0;
+    align-items: start;
+    margin-block: 2.8rem;
+  }
+
+  .timeline-media img {
+    aspect-ratio: 16 / 9;
+    border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+    box-shadow: none;
+  }
+
+  .timeline-card,
+  .timeline-item:nth-child(even) .timeline-card {
+    border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+    padding: 1.6rem 1.8rem 2rem;
+  }
+
+  .timeline-card:hover {
+    transform: none;
+  }
+
+  .timeline-year {
+    margin-top: -3.2rem;
+    margin-bottom: 1rem;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .timeline-card h2 {
+    font-size: 1.8rem;
+  }
+
+  .timeline-item .timeline-media,
+  .timeline-item:nth-child(even) .timeline-media {
+    grid-column: 2;
+    grid-row: 1;
+    width: 100%;
+  }
+
+  .timeline-item .timeline-card,
+  .timeline-item:nth-child(even) .timeline-card {
+    grid-column: 2;
+    grid-row: 2;
+    width: 100%;
+  }
+
+  .timeline-dot {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: start;
+    margin-top: 1.6rem;
+    width: 2.2rem;
+    height: 2.2rem;
+    border-width: 0.4rem;
+    transform: translateX(0.35rem);
+  }
+}

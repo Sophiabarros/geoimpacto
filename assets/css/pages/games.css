@@ -1,0 +1,120 @@
+/* ==========================================================================
+   Games (pages/games.html)
+   ========================================================================== */
+
+.games {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(3.2rem, 8vw, 11rem);
+  padding-top: clamp(2rem, 4vw, 4.8rem);
+}
+
+.games-intro h1 {
+  text-transform: uppercase;
+  line-height: 1.05;
+}
+
+.games-title-break {
+  display: block;
+}
+
+.games-intro p {
+  margin-top: clamp(2.4rem, 3.5vw, 4.1rem);
+  text-align: justify;
+  hyphens: auto;
+}
+
+.podium-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2.5rem;
+  padding: 0.8rem 2rem;
+  border-radius: var(--radius);
+  background: var(--branco);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
+  font-weight: 400;
+  transition: transform 0.25s var(--ease), box-shadow 0.25s ease;
+}
+
+.podium-pill svg {
+  flex: none;
+  color: var(--laranja);
+}
+
+.podium-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.games-collage {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.4rem 1.8rem;
+}
+
+.games-collage img {
+  width: 100%;
+  aspect-ratio: 240 / 186;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+}
+
+.games-collage__wide {
+  grid-column: span 2;
+  aspect-ratio: 498 / 314 !important;
+}
+
+.games-media .btn {
+  margin-top: clamp(3.2rem, 4vw, 5.2rem);
+}
+
+@media (max-width: 900px) {
+  .games {
+    grid-template-columns: 1fr;
+  }
+
+  .games-media {
+    max-width: 60rem;
+  }
+}
+
+@media (max-width: 600px) {
+  /* ordem no celular: título → imagens + "Iniciar jogo!" → texto → pódio */
+  .games {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding-top: 1.6rem;
+  }
+
+  .games-intro {
+    display: contents;
+  }
+
+  .games-intro h1 { order: 1; font-size: min(var(--fs-h1), 11vw); }
+  .games-media { order: 2; margin-top: 2rem; }
+  .games-intro p { order: 3; margin-top: 2.8rem; text-align: left; font-size: 1.5rem; }
+  .podium-pill { order: 4; }
+
+  .games-collage {
+    gap: 1rem;
+  }
+
+  .games-collage__wide {
+    aspect-ratio: 16 / 9 !important;
+  }
+
+  .games-media .btn {
+    margin-top: 1.6rem;
+  }
+
+  .podium-pill {
+    width: 100%;
+    justify-content: center;
+    margin-top: 2rem;
+    padding-block: 1.2rem;
+  }
+}

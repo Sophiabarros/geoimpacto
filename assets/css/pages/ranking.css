@@ -1,0 +1,50 @@
+/* ==========================================================================
+   Pódio (pages/ranking.html)
+   O pódio em si está em assets/css/components/podium.css.
+   ========================================================================== */
+
+.ranking-page {
+  text-align: center;
+}
+
+.leaderboard-title {
+  margin-block: clamp(2.4rem, 5vw, 6.7rem) clamp(4rem, 6vw, 7rem);
+  font-size: var(--fs-display);
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--verde-musgo);
+}
+
+.leaderboard-title strong {
+  font: inherit;
+  color: var(--azul-escuro);
+}
+
+.ranking-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.6rem;
+  margin-top: clamp(4rem, 6vw, 6rem);
+}
+
+@media (max-width: 520px) {
+  /* não encosta mais nas bordas da tela */
+  .leaderboard-title {
+    margin-block: 2.4rem 3.2rem;
+    font-size: min(var(--fs-display), 11vw);
+  }
+
+  .ranking-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 3.2rem;
+  }
+
+  .ranking-actions .btn {
+    padding-inline: 1.2rem;
+    font-size: 1.5rem;
+  }
+}

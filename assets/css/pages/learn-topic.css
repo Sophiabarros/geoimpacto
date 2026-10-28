@@ -1,0 +1,746 @@
+/* ==========================================================================
+   Páginas de conteúdo (pages/learn/*.html)
+   Cada seção mantém o nome original (oque, terceira, quarta…) e a ordem
+   varia por tema — por isso os estilos não dependem da posição.
+   ========================================================================== */
+
+.page-topic {
+  --h1-claro: #D9D9D9;
+}
+
+.page-topic main > section:not(.intro) {
+  margin-top: var(--section-gap);
+}
+
+.page-topic main p {
+  text-align: justify;
+  hyphens: auto;
+}
+
+/* ---------- Hero ---------- */
+.intro {
+  position: relative;
+  isolation: isolate;
+  min-height: clamp(64rem, 100svh, 108rem);
+  display: flex;
+  align-items: flex-end;
+  color: var(--branco);
+  background: var(--azul-escuro) center / cover no-repeat;
+}
+
+.intro[data-tema="furacao"] { background-image: url(../../img/learn/furacao/hero.webp); }
+.intro[data-tema="terremoto"] { background-image: url(../../img/learn/terremoto/hero.webp); }
+.intro[data-tema="tsunami"] { background-image: url(../../img/learn/tsunami/hero.webp); }
+.intro[data-tema="incendios"] { background-image: url(../../img/learn/incendios/hero.webp); }
+.intro[data-tema="enchente"] { background-image: url(../../img/learn/enchente/hero.webp); }
+.intro[data-tema="vulcao"] { background-image: url(../../img/learn/vulcao/hero.webp); }
+
+/* véu escuro para legibilidade + transição suave para o fundo da página */
+.intro::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(180deg, rgba(12, 28, 43, 0.55) 0%, rgba(12, 28, 43, 0.25) 45%, rgba(12, 28, 43, 0.35) 78%, var(--gelo) 100%);
+}
+
+.intro-content {
+  padding-top: clamp(14rem, 20vw, 26rem);
+  padding-bottom: clamp(6rem, 9vw, 11rem);
+}
+
+.intro h1 {
+  font-size: var(--fs-display);
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--h1-claro);
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.intro-text {
+  max-width: 64rem;
+  margin-top: 2.9rem;
+  margin-left: 0.4rem;
+  text-align: left !important;
+  color: var(--branco);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+}
+
+.spam-line {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2.4rem clamp(2.4rem, 6vw, 8.5rem);
+  margin-top: clamp(5rem, 9vw, 12rem);
+  padding-bottom: clamp(3.6rem, 5vw, 5.7rem);
+  border-bottom: 4px solid var(--branco);
+}
+
+.spam {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 2rem;
+  row-gap: 1.6rem;
+  align-items: start;
+  padding: 1.2rem;
+  margin: -1.2rem;
+  border-radius: var(--radius);
+  color: var(--gelo);
+  transition: background-color 0.3s ease;
+}
+
+.spam > svg {
+  grid-row: span 2;
+  color: #E9ECEE;
+}
+
+.spam-label {
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.spam-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: var(--fs-small);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: color 0.25s ease;
+}
+
+.spam-cta svg {
+  transition: transform 0.3s var(--ease);
+}
+
+.spam:hover {
+  background-color: rgba(249, 249, 249, 0.1);
+}
+
+.spam:hover .spam-cta {
+  color: var(--laranja);
+}
+
+.spam:hover .spam-cta svg {
+  transform: translateX(4px);
+}
+
+/* ---------- "O que é" ---------- */
+.oque .container {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: clamp(3.2rem, 6vw, 7.9rem);
+  align-items: center;
+}
+
+.imagens-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.4rem;
+  height: clamp(36rem, 38vw, 50rem);
+}
+
+.imagens-colunas {
+  display: grid;
+  grid-template-rows: 1.4fr 1fr;
+  gap: 2.4rem;
+  min-height: 0;
+}
+
+.imagens-1 img,
+.imagens-5 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-md);
+}
+
+.texto-1 h2 {
+  margin-bottom: 3.2rem;
+  color: var(--texto);
+}
+
+/* ---------- Cards informativos (fundo azul) ---------- */
+.terceira {
+  padding-block: clamp(4rem, 6vw, 7rem) clamp(6rem, 8vw, 9rem);
+  background-color: var(--azul-escuro);
+  color: var(--branco);
+}
+
+.terceira h2 {
+  text-align: center;
+  color: var(--branco);
+}
+
+.informativos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+  gap: clamp(2rem, 3vw, 4.6rem);
+  margin-top: clamp(4rem, 7vw, 9rem);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.4rem;
+  padding: 3rem 2rem 3.2rem;
+  border: 5px solid var(--cinza-claro);
+  border-radius: var(--radius);
+  text-align: center;
+  transition: transform 0.35s var(--ease), background-color 0.35s ease, border-color 0.35s ease;
+}
+
+.info:hover {
+  transform: translateY(-6px);
+  background-color: rgba(249, 249, 249, 0.06);
+  border-color: var(--laranja);
+}
+
+.info svg,
+.info i {
+  height: 8rem;
+  width: auto;
+  flex: none;
+}
+
+.info i {
+  font-size: 7.2rem;
+  line-height: 1;
+  color: var(--cinza-claro);
+}
+
+.terceira .info p {
+  font-weight: 300;
+  text-align: center;
+  hyphens: manual;
+  color: var(--branco);
+}
+
+/* ---------- Carrossel ---------- */
+.carousel {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: clamp(1.2rem, 2.4vw, 2.9rem);
+}
+
+.carousel-viewport {
+  overflow: hidden;
+  border-radius: var(--radius);
+  background-color: var(--azul-escuro);
+  box-shadow: var(--shadow-lg);
+}
+
+.siema .conteudo {
+  display: flex;
+  align-items: center;
+  gap: clamp(2.4rem, 4vw, 4.5rem);
+  min-height: 46rem;
+  padding: clamp(2.8rem, 4.5vw, 5.6rem);
+  color: var(--branco);
+}
+
+.texto-siema {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.texto-siema h2 {
+  color: var(--branco);
+  font-size: clamp(2.4rem, 1.6vw + 1.6rem, 4rem);
+}
+
+.texto-siema p {
+  margin-top: 2.2rem;
+  font-weight: 300;
+  color: var(--branco);
+}
+
+.siema .conteudo img {
+  flex: 0 0 38%;
+  width: 38%;
+  max-width: 42rem;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+}
+
+.carousel-btn {
+  display: grid;
+  place-items: center;
+  width: 5.6rem;
+  height: 5.6rem;
+  border-radius: 50%;
+  color: var(--azul-escuro);
+  background-color: var(--branco);
+  box-shadow: var(--shadow-md);
+  transition: background-color 0.25s ease, color 0.25s ease, transform 0.2s var(--ease);
+}
+
+.carousel-btn:hover {
+  color: var(--branco);
+  background-color: var(--laranja);
+  transform: scale(1.06);
+}
+
+/* ---------- Texto + duas imagens ---------- */
+.quinta .container {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(3.2rem, 6vw, 8.2rem);
+  align-items: center;
+}
+
+.texto-2 h2 {
+  margin-bottom: 2.4rem;
+}
+
+.imagens-5 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1.6rem, 2.4vw, 3.2rem);
+  align-items: start;
+}
+
+.imagens-5 img {
+  aspect-ratio: 3 / 5;
+}
+
+.imagens-5 .pequena {
+  aspect-ratio: 3 / 4;
+}
+
+/* ---------- Linhas alternadas (prevenção / placas) ---------- */
+.sexta h2,
+.setima h2 {
+  text-align: center;
+  margin-bottom: clamp(3.6rem, 5vw, 5.8rem);
+}
+
+.conteudo-5 {
+  display: grid;
+  gap: clamp(4rem, 6vw, 8.8rem);
+}
+
+.linha {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(3.2rem, 8vw, 13rem);
+  align-items: center;
+}
+
+.linha img {
+  width: 100%;
+  max-width: 57.2rem;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-md);
+}
+
+.linha .s-2 img {
+  margin-left: auto;
+}
+
+/* ---------- Tópicos com miniatura ---------- */
+.grade {
+  display: grid;
+  gap: 4.4rem;
+  margin-bottom: 4.4rem;
+}
+
+.row-7 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4.4rem clamp(3.2rem, 6vw, 10rem);
+}
+
+.topico,
+.topico-row {
+  display: flex;
+  align-items: flex-start;
+  gap: clamp(2rem, 3vw, 4rem);
+}
+
+.setima img {
+  flex: none;
+  width: clamp(8rem, 9vw, 12rem);
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ---------- Navegação entre temas ---------- */
+.topic-nav {
+  margin-top: var(--section-gap);
+  text-align: center;
+}
+
+.topic-nav h2 {
+  margin-bottom: 4rem;
+}
+
+.topic-nav ul {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+  max-width: 96rem;
+  margin-inline: auto;
+}
+
+.topic-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 6.4rem;
+  padding: 1.6rem 2rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  color: var(--gelo);
+  background-color: var(--azul-escuro);
+  transition: background-color 0.3s ease, transform 0.2s var(--ease);
+}
+
+.topic-link:hover {
+  background-color: var(--azul-profundo);
+  transform: translateY(-2px);
+}
+
+.topic-link[aria-current="page"] {
+  background-color: var(--laranja);
+}
+
+.back-to-top {
+  display: grid;
+  place-items: center;
+  width: 6rem;
+  height: 6rem;
+  margin: 6rem 0 0 auto;
+  border: 3px solid var(--azul-escuro);
+  border-radius: 50%;
+  color: var(--azul-escuro);
+  transition: background-color 0.25s ease, color 0.25s ease, transform 0.2s var(--ease);
+}
+
+.back-to-top:hover {
+  color: var(--branco);
+  background-color: var(--azul-escuro);
+  transform: translateY(-3px);
+}
+
+/* ==========================================================================
+   Responsivo
+   ========================================================================== */
+@media (max-width: 1000px) {
+  .oque .container,
+  .quinta .container {
+    grid-template-columns: 1fr;
+  }
+
+  .imagens-1 {
+    height: clamp(30rem, 60vw, 48rem);
+  }
+
+  .linha {
+    grid-template-columns: 1fr;
+  }
+
+  .linha .s-2 {
+    order: -1;
+  }
+
+  .linha img {
+    max-width: none;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+
+  .row-7 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .page-topic main p {
+    text-align: left;
+  }
+
+  .spam-line {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+  }
+
+  .spam {
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    row-gap: 0;
+    padding: 1.4rem 1.6rem;
+    margin: 0;
+    background: rgba(249, 249, 249, 0.1);
+    backdrop-filter: blur(4px);
+  }
+
+  .spam > svg {
+    grid-row: auto;
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+
+  .spam-cta {
+    font-size: 0;
+    gap: 0;
+  }
+
+  .spam-cta svg {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+
+  .carousel {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "view view"
+      "prev next";
+  }
+
+  .carousel-viewport {
+    grid-area: view;
+  }
+
+  [data-carousel-prev] {
+    grid-area: prev;
+    justify-self: end;
+  }
+
+  [data-carousel-next] {
+    grid-area: next;
+    justify-self: start;
+  }
+
+  .siema .conteudo {
+    flex-direction: column-reverse;
+    align-items: stretch;
+    min-height: 0;
+  }
+
+  .siema .conteudo img {
+    width: 100%;
+    max-width: none;
+    flex-basis: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .topic-nav ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ---------- Celular: tudo mais compacto ---------- */
+@media (max-width: 760px) {
+  .page-topic main > section:not(.intro) {
+    margin-top: 5.6rem;
+  }
+
+  /* hero na altura do conteúdo, título logo abaixo do cabeçalho */
+  .intro {
+    min-height: 0;
+    border-radius: 0 0 2.4rem 2.4rem;
+    overflow: hidden;
+  }
+
+  /* sem o degradê para branco: os atalhos ficam legíveis até o fim */
+  .intro::before {
+    background: linear-gradient(180deg, rgba(12, 28, 43, 0.6) 0%, rgba(12, 28, 43, 0.45) 50%, rgba(12, 28, 43, 0.7) 100%);
+  }
+
+  .intro-content {
+    padding-top: 9.6rem;
+    padding-bottom: 4rem;
+  }
+
+  .intro h1 {
+    font-size: min(var(--fs-display), 12vw);
+  }
+
+  .intro-text {
+    margin: 1.6rem 0 0;
+    font-size: 1.5rem;
+    line-height: 1.6;
+  }
+
+  .spam-line {
+    gap: 0.8rem;
+    margin-top: 2.8rem;
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  .spam {
+    padding: 1.1rem 1.4rem;
+  }
+
+  .spam-label {
+    font-size: 1.5rem;
+  }
+
+  /* cards informativos viram linhas: ícone à esquerda, texto à direita */
+  .terceira {
+    padding-block: 4rem 4.4rem;
+  }
+
+  .informativos {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    margin-top: 2.8rem;
+  }
+
+  .info {
+    flex-direction: row;
+    align-items: center;
+    gap: 1.6rem;
+    padding: 1.6rem 1.8rem;
+    border-width: 3px;
+    text-align: left;
+  }
+
+  .info:hover {
+    transform: none;
+  }
+
+  .info svg,
+  .info i {
+    width: 4.4rem;
+    height: 4.4rem;
+  }
+
+  .info i {
+    font-size: 4.4rem;
+  }
+
+  .terceira .info p {
+    font-size: 1.5rem;
+    text-align: left;
+  }
+
+  .siema .conteudo {
+    gap: 1.6rem;
+    padding: 2rem;
+  }
+
+  .texto-siema h2 {
+    font-size: 2rem;
+  }
+
+  .texto-siema p {
+    margin-top: 1.2rem;
+    font-size: 1.5rem;
+  }
+
+  .carousel-btn {
+    width: 4.8rem;
+    height: 4.8rem;
+  }
+
+  .imagens-5 img,
+  .imagens-5 .pequena {
+    aspect-ratio: 4 / 5;
+  }
+
+  .sexta h2,
+  .setima h2 {
+    margin-bottom: 2.8rem;
+  }
+
+  .conteudo-5 {
+    gap: 3.2rem;
+  }
+
+  .linha {
+    gap: 1.6rem;
+  }
+
+  .grade {
+    gap: 2.4rem;
+    margin-bottom: 2.4rem;
+  }
+
+  .row-7 {
+    gap: 2.4rem;
+  }
+
+  .setima img {
+    width: 6.4rem;
+  }
+
+  .setima p {
+    font-size: 1.5rem;
+  }
+
+  .topic-nav h2 {
+    margin-bottom: 2.4rem;
+  }
+
+  /* voltar ao topo vira botão flutuante */
+  .back-to-top {
+    position: fixed;
+    right: 1.6rem;
+    bottom: 1.6rem;
+    z-index: 15;
+    width: 4.8rem;
+    height: 4.8rem;
+    margin: 0;
+    border: 0;
+    color: var(--branco);
+    background: var(--azul-escuro);
+    box-shadow: var(--shadow-lg);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(12px);
+    transition: opacity 0.3s ease, transform 0.3s var(--ease);
+  }
+
+  .back-to-top.is-visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .imagens-1 {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .imagens-colunas {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: none;
+  }
+
+  .imagens-1 img {
+    aspect-ratio: 4 / 3;
+  }
+
+  .imagens-1 > img {
+    aspect-ratio: 16 / 10;
+  }
+
+  .topico,
+  .topico-row {
+    gap: 1.6rem;
+  }
+
+  .topic-nav ul {
+    gap: 1.2rem;
+  }
+
+  .topic-link {
+    min-height: 5.6rem;
+    padding: 1.2rem;
+    font-size: var(--fs-small);
+  }
+}

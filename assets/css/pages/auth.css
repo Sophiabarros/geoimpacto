@@ -1,0 +1,195 @@
+/* ==========================================================================
+   Login e cadastro (pages/login.html, pages/cadastro.html)
+   Tela dividida: formulário + painel com imagem.
+   ========================================================================== */
+
+.auth {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
+/* ---------- Formulário ---------- */
+.auth-main {
+  order: 2;
+  display: flex;
+  flex-direction: column;
+  padding: clamp(2rem, 3vw, 3rem) var(--gutter) clamp(4rem, 6vw, 6rem);
+}
+
+.auth-logo {
+  align-self: flex-end;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  max-width: 56rem;
+  margin: auto;
+  padding-top: 4rem;
+}
+
+.auth-form h1 {
+  font-size: var(--fs-h2);
+  font-weight: 700;
+}
+
+.auth-form .field label {
+  color: var(--azul-escuro);
+}
+
+.auth-form input {
+  background-color: var(--cinza);
+  font-weight: 500;
+}
+
+.auth-form input::placeholder {
+  color: var(--cinza-texto);
+  font-weight: 600;
+}
+
+.auth-form .btn {
+  margin-top: 1.2rem;
+  font-weight: 700;
+}
+
+.auth-switch {
+  text-align: center;
+}
+
+.auth-switch a {
+  font-weight: 600;
+  color: var(--laranja);
+}
+
+.auth-switch a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Painel com imagem ---------- */
+.auth-aside {
+  order: 1;
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  padding: clamp(6rem, 10vw, 12rem) clamp(2.4rem, 6vw, 8.7rem);
+  color: var(--branco);
+  background: url(../../img/auth-fundo.webp) center / cover no-repeat;
+  border-radius: 0 2.4rem 2.4rem 0;
+  overflow: hidden;
+}
+
+.auth-aside::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(180deg, rgba(30, 61, 89, 0.35), rgba(15, 25, 35, 0.55));
+}
+
+.auth-aside__content {
+  max-width: 48rem;
+}
+
+.auth-aside .eyebrow {
+  font-size: clamp(2rem, 1vw + 1.6rem, 3.2rem);
+  letter-spacing: 0.04em;
+}
+
+.auth-aside h2 {
+  margin-block: 0.8rem 2.4rem;
+  font-size: clamp(3.4rem, 3vw + 1.8rem, 6.2rem);
+  font-weight: 700;
+  color: var(--branco);
+}
+
+.auth-aside p {
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.auth-contacts {
+  display: grid;
+  gap: 2.4rem;
+  margin-top: clamp(4rem, 6vw, 7.9rem);
+}
+
+.auth-contacts li {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-weight: 600;
+}
+
+.auth-contacts svg {
+  flex: none;
+  width: clamp(4rem, 4vw, 6rem);
+  height: auto;
+}
+
+@media (max-width: 900px) {
+  .auth {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-main {
+    order: 1;
+    min-height: auto;
+  }
+
+  .auth-form {
+    padding-top: 2rem;
+    margin-top: 0;
+  }
+
+  .auth-aside {
+    order: 2;
+    padding: 4rem var(--gutter);
+    border-radius: 2.4rem 2.4rem 0 0;
+  }
+
+  .auth-aside::before {
+    background: linear-gradient(180deg, rgba(15, 25, 35, 0.55), rgba(15, 25, 35, 0.7));
+  }
+}
+
+@media (max-width: 520px) {
+  .auth-main {
+    padding-top: 1.2rem;
+  }
+
+  .auth-logo img {
+    width: 4.8rem;
+  }
+
+  .auth-form {
+    gap: 1.6rem;
+    padding-top: 0.8rem;
+  }
+
+  .auth-form h1 {
+    font-size: 2.8rem;
+  }
+
+  .auth-aside h2 {
+    font-size: 2.8rem;
+  }
+
+  .auth-aside p,
+  .auth-contacts li {
+    font-size: 1.5rem;
+  }
+
+  .auth-contacts {
+    gap: 1.6rem;
+    margin-top: 2.8rem;
+  }
+
+  .auth-contacts svg {
+    width: 3.2rem;
+  }
+}

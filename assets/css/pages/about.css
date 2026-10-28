@@ -1,0 +1,320 @@
+/* ==========================================================================
+   Sobre nós + Contato (pages/about-us.html)
+   ========================================================================== */
+
+.about-hero {
+  padding: clamp(16rem, 20vw, 22rem) 0 clamp(14rem, 16vw, 18rem);
+  background-color: var(--azul-escuro);
+  background-image: radial-gradient(circle at 15% 20%, rgba(74, 124, 89, 0.35), transparent 45%),
+    radial-gradient(circle at 85% 80%, rgba(247, 127, 0, 0.18), transparent 40%);
+  text-align: center;
+  color: var(--gelo);
+}
+
+.about-hero h1 {
+  font-size: var(--fs-display);
+  font-weight: 700;
+  color: var(--gelo);
+}
+
+.about-hero p {
+  max-width: 89rem;
+  margin: 2rem auto 0;
+  font-size: clamp(1.7rem, 0.7vw + 1.4rem, 2.4rem);
+  font-weight: 700;
+}
+
+/* ---------- Equipe ---------- */
+.team {
+  margin-top: clamp(-11rem, -8vw, -6rem);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 3.2rem clamp(1.6rem, 2.5vw, 4rem);
+  max-width: 108rem;
+  margin-inline: auto;
+}
+
+.member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.member img {
+  width: 100%;
+  max-width: 15.8rem;
+  aspect-ratio: 1;
+  border: 5px solid var(--gelo);
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: var(--shadow-md);
+  transition: transform 0.4s var(--ease);
+}
+
+.member:hover img {
+  transform: translateY(-6px) rotate(-3deg);
+}
+
+.member strong {
+  margin-top: 1.6rem;
+  font-size: clamp(2rem, 0.9vw + 1.5rem, 3rem);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--azul-escuro);
+}
+
+.member span {
+  margin-top: 0.4rem;
+  font-size: var(--fs-small);
+  color: var(--cinza-escuro);
+}
+
+/* ---------- História ---------- */
+.about-story {
+  max-width: calc(110rem + var(--gutter) * 2);
+  margin-top: clamp(6rem, 9vw, 12rem);
+}
+
+.about-story h2 {
+  max-width: 66rem;
+  font-size: var(--fs-h3);
+  font-weight: 600;
+  color: var(--texto);
+}
+
+.about-story__cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.4rem clamp(3.2rem, 6vw, 10.9rem);
+  margin-top: 3.2rem;
+}
+
+/* ---------- Contato ---------- */
+.contact {
+  margin-top: var(--section-gap);
+  scroll-margin-top: 2rem;
+}
+
+.contact-head {
+  max-width: 90rem;
+  margin: 0 auto clamp(4rem, 5vw, 7.5rem);
+  text-align: center;
+}
+
+.contact-head h2 {
+  margin-bottom: 2rem;
+  color: var(--texto);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr);
+  gap: clamp(2.4rem, 3vw, 4rem);
+  align-items: stretch;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: clamp(2.4rem, 4vw, 4rem) clamp(2rem, 5vw, 6.3rem);
+  border-radius: var(--radius);
+  background: var(--azul-escuro);
+  color: var(--branco);
+  box-shadow: var(--shadow-lg);
+}
+
+.contact-form h3 {
+  margin-bottom: 0.8rem;
+  font-size: var(--fs-h2);
+  font-weight: 700;
+  color: var(--branco);
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: var(--azul-medio);
+  color: var(--gelo);
+}
+
+.contact-form ::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 600;
+}
+
+.contact-form .btn {
+  align-self: flex-start;
+  min-width: min(100%, 30rem);
+  margin-top: 1.2rem;
+}
+
+.contact-cards {
+  display: grid;
+  gap: 2rem;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 2.4rem;
+  border-radius: var(--radius);
+  background: var(--cinza-claro);
+  transition: transform 0.3s var(--ease), box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateX(4px);
+  background: var(--cinza);
+  box-shadow: var(--shadow-md);
+}
+
+.contact-card svg {
+  flex: none;
+  width: clamp(5.6rem, 6vw, 8rem);
+  height: auto;
+}
+
+.contact-card strong {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: clamp(1.7rem, 0.5vw + 1.5rem, 2.2rem);
+  color: var(--azul-escuro);
+  overflow-wrap: anywhere;
+}
+
+.contact-card p {
+  font-size: var(--fs-small);
+  color: #222;
+}
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 1000px) {
+  .team-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .about-hero {
+    padding: 10rem 0 8.8rem;
+  }
+
+  .about-hero h1 {
+    font-size: min(var(--fs-display), 13vw);
+  }
+
+  .about-hero p {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .team {
+    margin-top: -5.6rem;
+  }
+
+  /* 3 por linha: equipe inteira em 2 linhas */
+  .team-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem 1.2rem;
+  }
+
+  .member img {
+    max-width: 9.6rem;
+    border-width: 3px;
+  }
+
+  .member strong {
+    margin-top: 0.8rem;
+    font-size: 1.5rem;
+  }
+
+  .member span {
+    font-size: 1.1rem;
+    overflow-wrap: anywhere;
+  }
+
+  .about-story {
+    margin-top: 4.8rem;
+  }
+
+  .about-story h2 {
+    font-size: 2rem;
+  }
+
+  .about-story__cols {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+    margin-top: 1.6rem;
+  }
+
+  .contact {
+    margin-top: 5.6rem;
+  }
+
+  .contact-head {
+    margin-bottom: 2.8rem;
+  }
+
+  .contact-head p {
+    font-size: 1.5rem;
+  }
+
+  .contact-form {
+    gap: 1.6rem;
+    padding: 2.4rem 1.6rem;
+  }
+
+  .contact-form h3 {
+    font-size: 2.4rem;
+  }
+
+  .contact-form textarea {
+    min-height: 14rem;
+  }
+
+  .contact-form .btn {
+    align-self: stretch;
+  }
+
+  .contact-cards {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .contact-card {
+    gap: 1.4rem;
+    padding: 1.6rem;
+  }
+
+  .contact-card:hover {
+    transform: none;
+  }
+
+  .contact-card svg {
+    width: 4.4rem;
+  }
+
+  /* e-mail não quebra mais no meio ("gmail.co / m") */
+  .contact-card strong {
+    font-size: 1.5rem;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  .contact-card p {
+    font-size: 1.4rem;
+  }
+}

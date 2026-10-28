@@ -1,0 +1,177 @@
+/* ==========================================================================
+   Minha pontuação (pages/minha-pontuacao.html)
+   ========================================================================== */
+
+.score-page {
+  max-width: calc(100rem + var(--gutter) * 2);
+}
+
+.score-head {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: end;
+  gap: 1.2rem 2.4rem;
+  margin-block: clamp(2rem, 4vw, 4.8rem) clamp(3.2rem, 4vw, 4.8rem);
+}
+
+.score-head .eyebrow {
+  grid-column: 1 / -1;
+}
+
+.score-head h1 {
+  font-size: var(--fs-h2);
+  overflow-wrap: anywhere;
+}
+
+.logout-btn {
+  border: 2px solid var(--azul-escuro);
+  box-shadow: none;
+}
+
+/* ---------- Histórico ---------- */
+.history {
+  margin-top: clamp(4rem, 6vw, 6.4rem);
+}
+
+.history h2 {
+  margin-bottom: 2.4rem;
+  font-size: var(--fs-h3);
+}
+
+.history-list {
+  display: grid;
+  gap: 1rem;
+  counter-reset: partida;
+}
+
+.history-item {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  padding: 1.6rem 2.4rem;
+  border-radius: var(--radius);
+  background: var(--branco);
+  box-shadow: var(--shadow-sm);
+  counter-increment: partida;
+}
+
+.history-item::before {
+  content: counter(partida);
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 50%;
+  background: var(--cinza);
+  font-size: var(--fs-small);
+  font-weight: 700;
+  color: var(--azul-escuro);
+}
+
+.history-item time {
+  flex: 1;
+  color: var(--cinza-texto);
+}
+
+.history-item strong {
+  font-size: clamp(1.8rem, 0.8vw + 1.5rem, 2.4rem);
+  color: var(--azul-escuro);
+}
+
+.history-item.is-best {
+  outline: 2px solid var(--laranja);
+}
+
+.history-item.is-best::before {
+  content: "★";
+  background: var(--laranja);
+  color: var(--branco);
+}
+
+/* ---------- Ainda não jogou ---------- */
+.score-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6rem;
+  padding: clamp(4rem, 6vw, 6.4rem) 2.4rem;
+  border: 3px dashed var(--cinza-claro);
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+.score-empty__title {
+  font-size: var(--fs-h3);
+  font-weight: 700;
+  color: var(--azul-escuro);
+}
+
+.score-empty .btn {
+  margin-top: 1.6rem;
+}
+
+.score-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+  margin-top: clamp(3.2rem, 5vw, 4.8rem);
+}
+
+@media (max-width: 560px) {
+  .score-head {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    margin-block: 1.6rem 2.4rem;
+  }
+
+  .score-head h1 {
+    font-size: 2.4rem;
+  }
+
+  /* "Sair" discreto ao lado do nome, não um botão gigante */
+  .logout-btn {
+    min-height: 0;
+    padding: 0.8rem 1.4rem;
+    border-width: 1.5px;
+    font-size: 1.4rem;
+  }
+
+  .history {
+    margin-top: 3.2rem;
+  }
+
+  .history h2 {
+    margin-bottom: 1.6rem;
+  }
+
+  .score-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 2.4rem;
+  }
+
+  .score-actions .btn {
+    padding-inline: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .history-item {
+    padding: 1.2rem 1.4rem;
+    gap: 1.2rem;
+  }
+
+  .history-item::before {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .history-item strong {
+    font-size: 1.7rem;
+  }
+
+  .history-item time {
+    font-size: var(--fs-small);
+  }
+}

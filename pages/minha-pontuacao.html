@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sua melhor pontuação, posição no ranking e histórico de partidas no GeoImpacto.">
+  <meta name="theme-color" content="#1E3D59">
+  <title>Minha pontuação · GeoImpacto</title>
+  <link rel="icon" href="../assets/img/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/pages/minha-pontuacao.css">
+  <script src="../assets/js/config.js" defer></script>
+  <script src="../assets/js/api.js" defer></script>
+  <script src="../assets/js/layout.js" defer></script>
+  <script src="../assets/js/pages/minha-pontuacao.js" defer></script>
+</head>
+<body data-requires-login>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+<header class="site-header">
+  <div class="container">
+    <a class="logo" href="../index.html" aria-label="GeoImpacto — página inicial">
+      <img src="../assets/img/logo.webp" alt="" width="80" height="80">
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menu"><span></span></button>
+    <nav class="site-nav" id="site-nav" aria-label="Principal">
+      <ul>
+        <li><a href="../pages/learn.html">Learn</a></li>
+        <li><a href="../pages/games.html">Games</a></li>
+        <li><a href="../pages/about-us.html">About us</a></li>
+        <li><a href="../pages/about-us.html#contato">Contact us</a></li>
+        <li class="nav-account" data-account></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="conteudo" class="container score-page">
+  <header class="score-head">
+    <span class="eyebrow">Minha pontuação</span>
+    <h1 id="score-title">Sua pontuação</h1>
+    <button class="btn btn--claro logout-btn" id="logout-btn" type="button">Sair da conta</button>
+  </header>
+
+  <div id="score-content" aria-live="polite"></div>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <p>Educação para um planeta mais consciente</p>
+    <p>© 2025 GeoImpacto. Todos os direitos reservados.</p>
+    <p><strong>GeoImpacto</strong></p>
+  </div>
+</footer>
+</body>
+</html>
